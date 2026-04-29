@@ -3,800 +3,808 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Informe Nómina — Marzo 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<title>Metricom — Portafolio de Servicios 2026</title>
+<meta name="description" content="Metricom: 23+ años como aliado estratégico en prueba, medición y diagnóstico de redes de telecomunicaciones en Colombia.">
+<meta property="og:title" content="Metricom — Portafolio de Servicios 2026">
+<meta property="og:description" content="Soluciones de vanguardia para la prueba, medición y diagnóstico de redes de telecomunicaciones.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metricom.com.co/portafolio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0d1f3c;--blue:#1a56db;--cyan:#0891b2;--green:#059669;--amber:#d97706;--red:#dc2626;--orange:#ea580c;--gray:#64748b;--light:#f1f5f9;--border:#e2e8f0;--white:#fff;--text:#1e293b;--muted:#94a3b8}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:#f8fafc;color:var(--text);font-size:14px;line-height:1.6}
-/* HEADER */
-.header{background:var(--navy);position:relative;overflow:hidden}
-.header::before{content:'';position:absolute;top:-60px;right:-80px;width:340px;height:340px;background:radial-gradient(circle,rgba(26,86,219,.35) 0%,transparent 70%);border-radius:50%}
-.header::after{content:'';position:absolute;bottom:-40px;left:20%;width:200px;height:200px;background:radial-gradient(circle,rgba(8,145,178,.2) 0%,transparent 70%);border-radius:50%}
-.header-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:38px 40px 30px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.header-tag{display:inline-block;background:rgba(26,86,219,.25);border:1px solid rgba(37,99,235,.4);color:#93c5fd;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
-.header h1{font-family:'Syne',sans-serif;font-size:clamp(24px,3.2vw,38px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em}
-.header h1 span{color:#60a5fa}
-.header-sub{margin-top:6px;color:#94a3b8;font-size:12px;font-weight:300}
-.header-right{text-align:right}
-.header-date{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:#60a5fa}
-.header-note{font-size:11px;color:#475569;margin-top:3px}
-/* NAV */
-.nav-bar{background:var(--navy);border-top:1px solid rgba(255,255,255,.07);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.18)}
-.nav-inner{max-width:1280px;margin:0 auto;padding:0 40px;display:flex;overflow-x:auto}
-.nav-inner::-webkit-scrollbar{height:0}
-.nav-btn{background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:500;color:#64748b;padding:13px 16px;border-bottom:2.5px solid transparent;white-space:nowrap;transition:color .2s,border-color .2s}
-.nav-btn:hover{color:#cbd5e1}
-.nav-btn.active{color:#60a5fa;border-bottom-color:#60a5fa}
-/* LAYOUT */
-.main{max-width:1280px;margin:0 auto;padding:26px 40px 60px}
-.section{display:none}
-.section.active{display:block}
-.section-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;color:var(--navy);margin-bottom:3px}
-.section-desc{font-size:12.5px;color:var(--gray);margin-bottom:18px;max-width:860px;line-height:1.55}
-/* FILTER BAR */
-.filter-bar{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:12px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.filter-label{font-size:12px;font-weight:600;color:var(--navy);white-space:nowrap}
-.filter-select-wrap{position:relative;flex:1;min-width:220px;max-width:400px}
-.filter-select{width:100%;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text);background:var(--white);border:1px solid var(--border);border-radius:8px;padding:7px 32px 7px 10px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6,9 12,15 18,9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;transition:border-color .2s}
-.filter-select:focus{border-color:var(--blue)}
-.filter-tags{display:flex;gap:6px;flex-wrap:wrap;flex:2}
-.filter-tag{display:inline-flex;align-items:center;gap:5px;background:#dbeafe;color:#1d4ed8;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;cursor:pointer;transition:background .15s}
-.filter-tag:hover{background:#bfdbfe}
-.filter-tag .remove{font-size:13px;line-height:1;color:#3b82f6}
-.filter-clear{font-size:11px;color:var(--gray);cursor:pointer;text-decoration:underline;white-space:nowrap}
-.filter-clear:hover{color:var(--red)}
-/* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:11px;margin-bottom:20px}
-.kpi-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:15px 17px 13px;position:relative;overflow:hidden;transition:transform .15s,box-shadow .15s}
-.kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
-.kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--kc,var(--blue));border-radius:12px 12px 0 0}
-.kpi-label{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
-.kpi-value{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;color:var(--kc,var(--navy));line-height:1.1}
-.kpi-sub{font-size:10.5px;color:var(--muted);margin-top:3px}
-/* CARDS */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
-@media(max-width:900px){.two-col{grid-template-columns:1fr}}
-.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
-.card-title{font-family:'Syne',sans-serif;font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:13px;display:flex;align-items:center;gap:7px}
-.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-/* TABLE */
-.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
-table{width:100%;border-collapse:collapse;font-size:12px}
-thead th{background:var(--navy);color:#fff;padding:9px 11px;text-align:left;font-family:'Syne',sans-serif;font-size:10px;font-weight:600;letter-spacing:.05em;white-space:nowrap}
-thead th.num{text-align:right}
-tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
-tbody tr:last-child{border-bottom:none}
-tbody tr:hover{background:#f8fafc}
-tbody tr.admin-row{background:#fff7ed}
-tbody tr.admin-row:hover{background:#fff3e0}
-tbody tr.total-row{background:#eef2ff;font-weight:600}
-tbody tr.hidden-row{display:none}
-td{padding:7px 11px;color:var(--text);white-space:nowrap}
-td.num{text-align:right;font-variant-numeric:tabular-nums}
-td.pct-red{color:var(--red);font-weight:600}
-td.pct-amber{color:var(--amber);font-weight:600}
-td.pct-green{color:var(--green);font-weight:600}
-td.bold{font-weight:600;color:var(--navy)}
-.badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px}
-.badge-prod{background:#dbeafe;color:#1d4ed8}
-.badge-admin{background:#ffedd5;color:#c2410c}
-/* BARS */
-.bar-row{display:flex;align-items:center;gap:9px;margin-bottom:7px}
-.bar-label{font-size:11px;color:var(--text);width:185px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar-track{flex:1;height:9px;background:var(--light);border-radius:6px;overflow:hidden}
-.bar-fill{height:100%;border-radius:6px;transition:width .6s cubic-bezier(.4,0,.2,1)}
-.bar-val{font-size:11px;font-weight:600;color:var(--navy);width:78px;text-align:right;flex-shrink:0}
-/* SEMAFORO */
-.semaforo{display:flex;gap:16px;margin-bottom:13px;flex-wrap:wrap}
-.sem-item{display:flex;align-items:center;gap:6px;font-size:12px}
-.sem-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-/* CONCEPT */
-.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:10px}
-@media(max-width:800px){.concept-grid{grid-template-columns:1fr}}
-.concept-group{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-.concept-header{padding:9px 13px;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#fff}
-.concept-row{display:flex;justify-content:space-between;align-items:center;padding:6px 13px;border-bottom:1px solid var(--border);font-size:11.5px}
-.concept-row:last-child{border-bottom:none}
-.concept-name{color:var(--text);flex:1;padding-right:8px}
-.concept-val{font-weight:600;color:var(--navy);white-space:nowrap}
-.concept-pct{color:var(--muted);font-size:10.5px;margin-left:6px;min-width:32px;text-align:right}
-/* RESUMEN RESPONSIVE GRIDS */
-@media(max-width:1100px){
-  #kpi-r1{grid-template-columns:repeat(3,1fr) !important}
-  #kpi-r3{grid-template-columns:repeat(4,1fr) !important}
-  #kpi-r2{grid-template-columns:repeat(3,1fr) !important}
-  #kpi-r3{grid-template-columns:repeat(3,1fr) !important}
-  #tab-resumen .three-graf{grid-template-columns:1fr 1fr !important}
+:root {
+  --navy: #0A2540;
+  --navy-mid: #0F3460;
+  --teal: #0097A7;
+  --teal-light: #26C6DA;
+  --cyan: #00E5FF;
+  --white: #FFFFFF;
+  --off-white: #F4F7FA;
+  --gray-50: #F8FAFB;
+  --gray-100: #E8ECF0;
+  --gray-200: #C4CDD5;
+  --gray-500: #6B7B8D;
+  --gradient-hero: linear-gradient(135deg, #0A2540 0%, #0F3460 40%, #0097A7 100%);
+  --gradient-accent: linear-gradient(90deg, #0097A7, #00E5FF);
+  --shadow-sm: 0 2px 8px rgba(10,37,64,0.06);
+  --shadow-md: 0 8px 32px rgba(10,37,64,0.10);
+  --shadow-lg: 0 20px 60px rgba(10,37,64,0.15);
+  --radius: 16px;
+  --radius-sm: 10px;
 }
-@media(max-width:700px){
-  #kpi-r1,#kpi-r2,#kpi-r3{grid-template-columns:repeat(2,1fr) !important}
-  #tab-resumen .three-graf{grid-template-columns:1fr !important}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--off-white);overflow-x:hidden}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(10,37,64,0.05);transition:all .4s}
+.nav.scrolled{padding:10px 40px;box-shadow:var(--shadow-sm)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-wave{height:32px;display:flex;align-items:flex-end;gap:2px}
+.logo-wave span{width:3px;border-radius:2px;background:var(--gradient-accent);display:block}
+.nav-brand{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.5rem;color:var(--navy)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;color:var(--gray-500);font-weight:500;font-size:.88rem;letter-spacing:.01em;transition:color .3s}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{background:var(--gradient-accent);color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:600!important;font-size:.83rem!important;transition:transform .3s,box-shadow .3s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,151,167,0.3)}
+.nav-share{background:none;border:1px solid var(--gray-200);border-radius:50px;padding:8px 18px;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:500;color:var(--gray-500);transition:all .3s;font-family:'DM Sans',sans-serif}
+.nav-share:hover{border-color:var(--teal);color:var(--teal)}
+.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-toggle span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;transition:.3s}
+
+/* ===== SHARE MODAL ===== */
+.share-overlay{position:fixed;inset:0;background:rgba(10,37,64,0.5);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center}
+.share-overlay.open{display:flex}
+.share-modal{background:var(--white);border-radius:var(--radius);padding:40px;max-width:420px;width:90%;text-align:center;position:relative;animation:scaleIn .3s ease}
+@keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.share-modal h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:8px}
+.share-modal p{font-size:.88rem;color:var(--gray-500);margin-bottom:24px}
+.share-qr{width:180px;height:180px;margin:0 auto 20px;background:var(--gray-50);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;border:1px solid var(--gray-100)}
+.share-qr canvas{border-radius:8px}
+.share-url{display:flex;gap:8px;margin-bottom:20px}
+.share-url input{flex:1;padding:12px 16px;border:1px solid var(--gray-100);border-radius:var(--radius-sm);font-size:.85rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--gray-50)}
+.share-url button{padding:12px 20px;border:none;border-radius:var(--radius-sm);background:var(--gradient-accent);color:var(--white);font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85rem;white-space:nowrap;transition:transform .2s}
+.share-url button:hover{transform:translateY(-1px)}
+.share-buttons{display:flex;gap:10px;justify-content:center}
+.share-btn{width:48px;height:48px;border-radius:12px;border:1px solid var(--gray-100);background:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.share-btn:hover{border-color:var(--teal);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.share-btn svg{width:20px;height:20px}
+.share-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--gray-500);font-size:1.4rem}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;background:var(--gradient-hero);position:relative;overflow:hidden;padding:120px 60px 80px}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:60px 60px}
+.hero::before{content:'';position:absolute;top:-40%;right:-20%;width:70vw;height:70vw;background:radial-gradient(circle,rgba(0,229,255,.1) 0%,transparent 65%);animation:pulse 8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.15);opacity:1}}
+.hero-content{position:relative;z-index:2;max-width:680px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:8px 20px;color:var(--teal-light);font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px;animation:fadeUp .8s ease both}
+.hero-badge::before{content:'';width:8px;height:8px;background:var(--cyan);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Outfit',sans-serif;font-size:clamp(2.6rem,5vw,4.2rem);font-weight:800;line-height:1.08;color:var(--white);margin-bottom:24px;animation:fadeUp .8s .1s ease both}
+.hero h1 span{background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero>p,.hero-content>p{font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.65);margin-bottom:36px;max-width:540px;animation:fadeUp .8s .2s ease both}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .3s ease both}
+.btn-p{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;border-radius:50px;background:var(--gradient-accent);color:var(--white);font-weight:600;font-size:.95rem;text-decoration:none;border:none;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,151,167,.35)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;padding:15px 32px;border-radius:50px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:var(--white);font-weight:500;font-size:.95rem;text-decoration:none;transition:background .3s}
+.btn-s:hover{background:rgba(255,255,255,.12)}
+.hero-stats{position:relative;z-index:2;display:flex;gap:48px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.08);animation:fadeUp .8s .4s ease both}
+.stat-num{font-family:'Outfit',sans-serif;font-size:2.6rem;font-weight:700;background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-lbl{font-size:.82rem;color:rgba(255,255,255,.45);margin-top:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== CERT STRIP ===== */
+.cert-strip{background:var(--white);padding:28px 60px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;border-bottom:1px solid var(--gray-100)}
+.cert-item{display:flex;align-items:center;gap:10px;color:var(--gray-500);font-size:.82rem;font-weight:500}
+.cert-ico{width:36px;height:36px;background:var(--gray-50);border-radius:10px;display:flex;align-items:center;justify-content:center}
+
+/* ===== SECTIONS ===== */
+.sec{padding:96px 60px;max-width:1320px;margin:0 auto}
+.sec-dark{background:var(--gradient-hero);max-width:100%;padding:96px 60px}
+.sec-white{background:var(--white)}
+.sec-lbl{font-size:.73rem;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);margin-bottom:10px}
+.sec-dark .sec-lbl{color:var(--teal-light)}
+.sec-title{font-family:'Outfit',sans-serif;font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:700;line-height:1.15;margin-bottom:16px}
+.sec-dark .sec-title{color:var(--white)}
+.sec-sub{font-size:1.05rem;line-height:1.7;color:var(--gray-500);max-width:620px;margin-bottom:52px}
+.sec-dark .sec-sub{color:rgba(255,255,255,.55)}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-img{width:100%;height:440px;border-radius:var(--radius);overflow:hidden;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,151,167,.25),transparent 60%)}
+.about-feats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.about-f{padding:20px;background:var(--white);border-radius:var(--radius-sm);border:1px solid var(--gray-100);transition:box-shadow .3s}
+.about-f:hover{box-shadow:var(--shadow-md)}
+.about-f-ico{width:42px;height:42px;background:linear-gradient(135deg,rgba(0,151,167,.1),rgba(0,229,255,.04));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;color:var(--teal)}
+.about-f h4{font-weight:600;font-size:.9rem;margin-bottom:5px}
+.about-f p{font-size:.8rem;color:var(--gray-500);line-height:1.5}
+
+/* ===== LINES ===== */
+.lines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.line-card{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--gray-100);transition:transform .4s,box-shadow .4s;cursor:default}
+.line-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.line-img{width:100%;height:160px;overflow:hidden;position:relative}
+.line-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.line-card:hover .line-img img{transform:scale(1.08)}
+.line-body{padding:24px}
+.line-body h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:6px}
+.line-body p{font-size:.82rem;color:var(--gray-500);line-height:1.6}
+
+/* ===== TECH TABS ===== */
+.tech-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.tech-tab{padding:10px 22px;border-radius:50px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:rgba(255,255,255,.55);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif}
+.tech-tab.active,.tech-tab:hover{background:var(--gradient-accent);color:var(--white);border-color:transparent}
+.tech-panel{display:none;animation:fadeUp .5s ease}
+.tech-panel.active{display:block}
+.tech-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
+.tech-info h3{font-family:'Outfit',sans-serif;font-size:1.7rem;font-weight:700;color:var(--white);margin-bottom:14px}
+.tech-info>p{color:rgba(255,255,255,.6);line-height:1.7;font-size:.95rem;margin-bottom:24px}
+.tech-feats{display:flex;flex-direction:column;gap:14px}
+.tech-ft{display:flex;gap:12px;padding:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius-sm);transition:background .3s}
+.tech-ft:hover{background:rgba(255,255,255,.08)}
+.tech-ft-dot{min-width:10px;height:10px;background:var(--gradient-accent);border-radius:50%;margin-top:5px}
+.tech-ft h4{color:var(--white);font-weight:600;font-size:.87rem;margin-bottom:3px}
+.tech-ft p{color:rgba(255,255,255,.45);font-size:.8rem;line-height:1.5}
+.tech-products{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tech-prod{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-sm);overflow:hidden;transition:all .3s}
+.tech-prod:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.tech-prod-img{width:100%;height:140px;overflow:hidden;background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center}
+.tech-prod-img img{max-width:90%;max-height:120px;object-fit:contain}
+/* Placeholder when no image */
+.tech-prod-img .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.15);font-size:2.5rem}
+.tech-prod-body{padding:16px}
+.tech-prod-body h4{color:var(--teal-light);font-weight:600;font-size:.85rem;margin-bottom:6px}
+.tech-prod-body p{color:rgba(255,255,255,.5);font-size:.78rem;line-height:1.5}
+
+/* ===== BRANDS ===== */
+.brands-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.brand-card{background:var(--white);border:1px solid var(--gray-100);border-radius:var(--radius-sm);height:90px;display:flex;align-items:center;justify-content:center;padding:16px;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.brand-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.brand-card img{max-width:100%;max-height:50px;object-fit:contain;filter:grayscale(100%) opacity(0.6);transition:filter .3s}
+.brand-card:hover img{filter:grayscale(0%) opacity(1)}
+.brand-card .brand-text{font-family:'Outfit',sans-serif;font-weight:700;font-size:.95rem;color:var(--navy);opacity:.5;transition:opacity .3s;letter-spacing:.02em}
+.brand-card:hover .brand-text{opacity:1}
+
+/* ===== CONTACT ===== */
+.contact-card{max-width:900px;margin:0 auto;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.contact-left{background:var(--gradient-hero);padding:44px 40px;color:var(--white)}
+.contact-left h3{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:20px}
+.c-detail{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+.c-detail p a{color:var(--teal-light);text-decoration:none;font-weight:500}
+.c-detail p a:hover{text-decoration:underline}
+.c-detail-ico{width:38px;height:38px;background:rgba(255,255,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-detail h4{font-weight:600;font-size:.84rem;margin-bottom:3px}
+.c-detail p{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.5}
+.contact-right{padding:48px 40px}
+.contact-right h3{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:28px;color:var(--navy)}
+.person{display:flex;gap:14px;align-items:center;padding:18px;border-radius:var(--radius-sm);border:1px solid var(--gray-100);margin-bottom:14px;transition:box-shadow .3s}
+.person:hover{box-shadow:var(--shadow-sm)}
+.person-av{width:50px;height:50px;background:linear-gradient(135deg,var(--teal),var(--teal-light));border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--white);font-family:'Outfit',sans-serif;font-weight:700;font-size:1.05rem;flex-shrink:0}
+.person h4{font-weight:600;font-size:.9rem}
+.person .role{font-size:.78rem;color:var(--gray-500)}
+.person a{font-size:.8rem;color:var(--teal);text-decoration:none;font-weight:500}
+.contact-qr{margin-top:20px;padding:16px;background:var(--gray-50);border-radius:var(--radius-sm);display:flex;align-items:center;gap:16px}
+.contact-qr canvas{border-radius:6px}
+.contact-qr-text{font-size:.82rem;color:var(--gray-500);line-height:1.5}
+.contact-qr-text strong{color:var(--navy);display:block;margin-bottom:2px}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--navy);padding:48px 60px 28px;color:rgba(255,255,255,.4)}
+.footer-inner{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.3rem;background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.footer p{font-size:.8rem}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s ease,transform .7s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .hero{padding:100px 28px 60px}
+  .sec,.sec-dark{padding:72px 28px}
+  .about-grid{grid-template-columns:1fr;gap:28px}
+  .lines-grid{grid-template-columns:1fr 1fr}
+  .tech-grid{grid-template-columns:1fr}
+  .tech-products{grid-template-columns:1fr}
+  .contact-card{grid-template-columns:1fr}
+  .brands-grid{grid-template-columns:repeat(3,1fr)}
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+  .cert-strip{padding:20px 28px;gap:20px}
 }
-/* FOOTER */
-.footer{background:var(--navy);padding:16px 40px;margin-top:40px;text-align:center}
-.footer p{font-size:11px;color:#475569}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.section.active .card,.section.active .kpi-card,.section.active .table-wrap{animation:fadeIn .22s ease both}
+@media(max-width:640px){
+  .hero h1{font-size:2rem}
+  .hero-stats{flex-direction:column;gap:20px}
+  .lines-grid{grid-template-columns:1fr}
+  .about-feats{grid-template-columns:1fr}
+  .brands-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-ctas{flex-direction:column}
+  .nav{padding:10px 16px}
+  .sec,.sec-dark{padding:48px 16px}
+  .footer{padding:36px 16px 20px}
+}
 </style>
 </head>
 <body>
-<header class="header">
-  <div class="header-inner">
-    <div class="header-left">
-      <div class="header-tag">Informe Gerencial</div>
-      <h1>Nómina <span>Marzo 2026</span></h1>
-      <p class="header-sub">Análisis de costos empresa · Producción · Eficiencia por proyecto</p>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-wave">
+      <span style="height:14px"></span><span style="height:20px"></span><span style="height:28px"></span>
+      <span style="height:24px"></span><span style="height:16px"></span><span style="height:22px"></span>
+      <span style="height:30px"></span><span style="height:24px"></span><span style="height:16px"></span>
     </div>
-    <div class="header-right">
-      <div class="header-date">Período: Marzo 2026</div>
-      <div class="header-note">Costo empresa (devengos brutos) · No incluye descuentos al trabajador</div>
-    </div>
+    <span class="nav-brand">metricom</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">Nosotros</a>
+    <a href="#lines">Servicios</a>
+    <a href="#tech">Tecnologías</a>
+    <a href="#brands">Representados</a>
+    <button class="nav-share" onclick="openShare()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Compartir
+    </button>
+    <a href="#contact" class="nav-cta">Contacto</a>
   </div>
-</header>
-<nav class="nav-bar">
-  <div class="nav-inner">
-    <button class="nav-btn active" onclick="showTab('resumen',this)">Resumen Ejecutivo</button>
-    <button class="nav-btn" onclick="showTab('costos',this)">Costos por Proyecto</button>
-    <button class="nav-btn" onclick="showTab('produccion',this)">Nómina vs Producción</button>
-    <button class="nav-btn" onclick="showTab('modmoi',this)">MOD / MOI</button>
-    <button class="nav-btn" onclick="showTab('extras',this)">Horas Extras</button>
-    <button class="nav-btn" onclick="showTab('conceptos',this)">Composición</button>
-  </div>
+  <button class="mobile-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
 </nav>
-<main class="main">
 
-<!-- ══ RESUMEN ══ -->
-<div class="section active" id="tab-resumen">
-
-  <!-- BLOQUE 1: Producción + Contratos + Proyectos + Nómina + Empleados -->
-  <div style="margin-bottom:18px">
-    <div style="font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;padding-left:2px">Contexto del Mes</div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:11px" id="kpi-r1"></div>
-    <!-- Nota aclaratoria prestacional -->
-    <div id="nota-prestacional" style="margin-top:10px;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.2);border-left:3px solid #7c3aed;border-radius:8px;padding:9px 14px;font-size:11px;color:#4c1d95;line-height:1.5">
-      <strong>⚠ Estimación factor prestacional:</strong> Sobre sueldo básico: SS patronal 22.5% (Salud 8.5%+Pensión 12%+ARL 2%) + Parafiscales 9% (SENA 2%+ICBF 3%+Caja 4%) + Prestaciones 21.83% (Cesantías 8.33%+Intereses 1%+Prima 8.33%+Vacaciones 4.17%) = <strong>53.3%</strong>. Sobre H.E.: SS+Parafiscales 31.5%. Auxilios no salariales sin aportes. ARL estimado en 2% (varía por actividad). <strong>Cifra estimada</strong> — el valor exacto depende de composición salarial y empleados con más de 10 SMLMV (exentos SENA+ICBF).
+<!-- SHARE MODAL -->
+<div class="share-overlay" id="shareOverlay" onclick="if(event.target===this)closeShare()">
+  <div class="share-modal">
+    <button class="share-close" onclick="closeShare()">&times;</button>
+    <h3>Compartir Portafolio</h3>
+    <p>Comparte este portafolio con tus colegas y clientes</p>
+    <div class="share-qr" id="qrContainer"></div>
+    <div class="share-url">
+      <input type="text" id="shareUrl" value="https://metricom.com.co/portafolio" readonly>
+      <button onclick="copyLink()">Copiar</button>
     </div>
-  </div>
-
-  <!-- DIVIDER -->
-  <div style="border-top:1px dashed var(--border);margin:4px 0 18px"></div>
-
-  <!-- BLOQUE 2: MOD / MOI — destacado con fondo -->
-  <div style="margin-bottom:18px">
-    <div style="font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;padding-left:2px">Mano de Obra</div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:11px" id="kpi-r2"></div>
-  </div>
-
-  <!-- DIVIDER -->
-  <div style="border-top:1px dashed var(--border);margin:4px 0 18px"></div>
-
-  <!-- BLOQUE 3: Composición de la nómina -->
-  <div style="margin-bottom:18px">
-    <div style="font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;padding-left:2px">Composición del Costo Nómina</div>
-    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:11px" id="kpi-r3"></div>
-  </div>
-
-  <!-- DIVIDER -->
-  <div style="border-top:1px dashed var(--border);margin:4px 0 18px"></div>
-
-  <!-- BLOQUE 4: Gráficas + Barras -->
-  <div class="three-graf" style="display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:16px;margin-bottom:0">
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--blue)"></span>Composición Nómina</div>
-      <div style="height:210px"><canvas id="ch-res-comp"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--cyan)"></span>MOD vs MOI</div>
-      <div style="height:210px"><canvas id="ch-res-modmoi"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Costo Nómina por Proyecto (Top 15)</div>
-      <div id="bars-resumen"></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ══ COSTOS ══ -->
-<div class="section" id="tab-costos">
-  <p class="section-title">Costos de Nómina por Proyecto</p>
-  <p class="section-desc">Costo empresa por proyecto. <span style="color:var(--orange);font-weight:600">Naranja</span> = centros sin producción (Oficina Principal, Ejecutiva, Personal de la Casa).</p>
-  <div class="filter-bar" id="fb-costos">
-    <span class="filter-label">Filtrar proyectos:</span>
-    <div class="filter-select-wrap"><select class="filter-select" id="fs-costos" onchange="addFilter('costos',this)"><option value="">— Seleccionar proyecto —</option></select></div>
-    <div class="filter-tags" id="ft-costos"></div>
-    <span class="filter-clear" onclick="clearFilter('costos')">Limpiar</span>
-  </div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--blue)"></span>Costo Total por Proyecto</div>
-      <div style="height:460px"><canvas id="ch-costo-bar"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--green)"></span>Composición por Categoría (Top 12)</div>
-      <div style="height:460px"><canvas id="ch-stacked"></canvas></div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Tabla Detallada</div>
-    <div class="table-wrap">
-      <table><thead><tr>
-        <th>Proyecto</th><th class="num">Empl.</th><th class="num">Nómina (sin prest.)</th>
-        <th class="num">Costo Empresa (est.)</th><th class="num">Factor prest.</th>
-        <th class="num">Sueldo</th><th class="num">H. Extras</th><th class="num">Aux/Subs</th>
-        <th class="num">Vac + Lic</th><th class="num">% s/Empresa</th><th>Tipo</th>
-      </tr></thead><tbody id="tbody-costos"></tbody></table>
+    <div class="share-buttons">
+      <button class="share-btn" title="WhatsApp" onclick="shareWhatsApp()">
+        <svg viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </button>
+      <button class="share-btn" title="Email" onclick="shareEmail()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0A2540" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+      </button>
+      <button class="share-btn" title="LinkedIn" onclick="shareLinkedIn()">
+        <svg viewBox="0 0 24 24" fill="#0077B5"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </button>
+      <button class="share-btn" title="Telegram" onclick="shareTelegram()">
+        <svg viewBox="0 0 24 24" fill="#0088cc"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.504-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </button>
+      <button class="share-btn" title="Descargar QR" onclick="downloadQR()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0A2540" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      </button>
     </div>
   </div>
 </div>
 
-<!-- ══ PRODUCCION ══ -->
-<div class="section" id="tab-produccion">
-  <p class="section-title">Nómina vs Producción y Costos de Contrato</p>
-  <p class="section-desc"><strong>% Nom/Prod</strong>: peso de la nómina sobre producción certificada. <strong>% Nom/Costo</strong>: peso sobre el costo del contrato. Ambos con semáforo.</p>
-  <div class="filter-bar">
-    <span class="filter-label">Filtrar proyectos:</span>
-    <div class="filter-select-wrap"><select class="filter-select" id="fs-prod" onchange="addFilter('prod',this)"><option value="">— Seleccionar proyecto —</option></select></div>
-    <div class="filter-tags" id="ft-prod"></div>
-    <span class="filter-clear" onclick="clearFilter('prod')">Limpiar</span>
-  </div>
-  <div class="semaforo">
-    <div class="sem-item"><div class="sem-dot" style="background:var(--green)"></div><span><strong style="color:var(--green)">&lt;20%</strong> Eficiente</span></div>
-    <div class="sem-item"><div class="sem-dot" style="background:var(--amber)"></div><span><strong style="color:var(--amber)">20–35%</strong> Moderado</span></div>
-    <div class="sem-item"><div class="sem-dot" style="background:var(--red)"></div><span><strong style="color:var(--red)">&gt;35%</strong> Requiere revisión</span></div>
-  </div>
-  <div class="card" style="margin-bottom:16px">
-    <div class="card-title"><span class="dot" style="background:var(--amber)"></span>% Nómina / Producción por Proyecto</div>
-    <div style="height:400px"><canvas id="ch-pct-prod"></canvas></div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Tabla: Producción · %Nom/Prod · Costos Contrato · %Nom/Costo · Costo Nómina</div>
-    <div class="table-wrap">
-      <table><thead><tr>
-        <th>Proyecto</th><th class="num">Empl.</th>
-        <th class="num">Producción</th><th class="num">% Nom/Prod</th>
-        <th class="num">Costos Contrato</th><th class="num">% Nom/Costo</th>
-        <th class="num" style="color:#c4b5fd">Costo Empresa (est.)</th>
-      </tr></thead><tbody id="tbody-prod"></tbody></table>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Portafolio de Servicios 2026</div>
+    <h1>Precisión que impulsa la <span>infraestructura del futuro</span></h1>
+    <p>Más de 23 años como aliado estratégico en prueba, medición y diagnóstico de redes de telecomunicaciones en Colombia. Tecnología de clase mundial para garantizar la confiabilidad de cada conexión.</p>
+    <div class="hero-ctas">
+      <a href="#tech" class="btn-p">Explorar Soluciones <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#contact" class="btn-s">Solicitar Asesoría</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">23+</div><div class="stat-lbl">Años de experiencia</div></div>
+      <div><div class="stat-num">8</div><div class="stat-lbl">Verticales tecnológicas</div></div>
+      <div><div class="stat-num">ISO</div><div class="stat-lbl">Certificación 9001</div></div>
     </div>
   </div>
+</section>
+
+<!-- CERTS -->
+<div class="cert-strip">
+  <div class="cert-item"><div class="cert-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0097A7" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>ICONTEC ISO 9001</div>
+  <div class="cert-item"><div class="cert-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0097A7" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>IQNET Certified</div>
+  <div class="cert-item"><div class="cert-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0097A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>Representantes autorizados</div>
+  <div class="cert-item"><div class="cert-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0097A7" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>Bogotá D.C., Colombia</div>
 </div>
 
-<!-- ══ MOD / MOI ══ -->
-<div class="section" id="tab-modmoi">
-  <p class="section-title">Mano de Obra Directa vs Indirecta</p>
-  <p class="section-desc"><strong>MOD</strong>: campo / actividades productivas. <strong>MOI</strong>: supervisión, ingeniería, HSE, administración de obra. Salario promedio sobre sueldo básico.</p>
-  <div class="filter-bar">
-    <span class="filter-label">Filtrar proyectos:</span>
-    <div class="filter-select-wrap"><select class="filter-select" id="fs-modmoi" onchange="addFilter('modmoi',this)"><option value="">— Seleccionar proyecto —</option></select></div>
-    <div class="filter-tags" id="ft-modmoi"></div>
-    <span class="filter-clear" onclick="clearFilter('modmoi')">Limpiar</span>
-  </div>
-  <div class="kpi-grid" id="kpi-modmoi"></div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--blue)"></span>Distribución MOD / MOI — Costo</div>
-      <div style="height:260px"><canvas id="ch-mod-donut"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--cyan)"></span>MOD vs MOI por Proyecto</div>
-      <div style="height:290px"><canvas id="ch-mod-stacked"></canvas></div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Detalle MOD / MOI con Salario Promedio</div>
-    <div class="table-wrap">
-      <table><thead><tr>
-        <th>Proyecto</th><th class="num">Empl.</th>
-        <th class="num">MOD (c/prest.)</th><th class="num">Pers.MOD</th><th class="num">Sal.Prom.MOD</th><th class="num">%MOD</th>
-        <th class="num">MOI (c/prest.)</th><th class="num">Pers.MOI</th><th class="num">Sal.Prom.MOI</th><th class="num">%MOI</th>
-      </tr></thead><tbody id="tbody-modmoi"></tbody></table>
-    </div>
-  </div>
-</div>
-
-<!-- ══ HORAS EXTRAS ══ -->
-<div class="section" id="tab-extras">
-  <p class="section-title">Impacto de Horas Extras y Recargos</p>
-  <p class="section-desc">H.E. diurnas/nocturnas, dominicales/festivas y recargos nocturnos. Costo adicional al salario ordinario.</p>
-  <div class="filter-bar">
-    <span class="filter-label">Filtrar proyectos:</span>
-    <div class="filter-select-wrap"><select class="filter-select" id="fs-extras" onchange="addFilter('extras',this)"><option value="">— Seleccionar proyecto —</option></select></div>
-    <div class="filter-tags" id="ft-extras"></div>
-    <span class="filter-clear" onclick="clearFilter('extras')">Limpiar</span>
-  </div>
-  <div class="kpi-grid" id="kpi-extras"></div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--red)"></span>Top Proyectos — Horas Extras</div>
-      <div style="height:380px"><canvas id="ch-ext-bar"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--orange)"></span>Por Tipo de Recargo</div>
-      <div style="height:380px"><canvas id="ch-ext-tipo"></canvas></div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Tabla de Horas Extras</div>
-    <div class="table-wrap">
-      <table><thead><tr>
-        <th>Proyecto</th><th class="num">Empl.</th><th class="num">Nómina</th>
-        <th class="num">Costo Empresa (est.)</th><th class="num">H.Extras + Recargos</th><th class="num">% s/ Nómina</th>
-      </tr></thead><tbody id="tbody-extras"></tbody></table>
-    </div>
-  </div>
-</div>
-
-<!-- ══ COMPOSICION ══ -->
-<div class="section" id="tab-conceptos">
-  <p class="section-title">Composición del Costo</p>
-  <p class="section-desc">Conceptos de nómina por categoría. La gráfica incluye seguridad social y prestaciones para mostrar el <strong>costo empresa total</strong>. Los porcentajes se calculan sobre el costo empresa estimado.</p>
-  <div class="filter-bar">
-    <span class="filter-label">Filtrar proyectos:</span>
-    <div class="filter-select-wrap"><select class="filter-select" id="fs-comp" onchange="addFilter('comp',this)"><option value="">— Seleccionar proyecto —</option></select></div>
-    <div class="filter-tags" id="ft-comp"></div>
-    <span class="filter-clear" onclick="clearFilter('comp')">Limpiar</span>
-  </div>
-  <div class="two-col">
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--blue)"></span>Distribución por Categoría</div>
-      <div style="height:290px"><canvas id="ch-cat-pie"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-title"><span class="dot" style="background:var(--navy)"></span>Resumen por Categoría</div>
-      <div id="cat-summary"></div>
-    </div>
-  </div>
-  <p style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--navy);margin:4px 0 10px">Detalle por Concepto</p>
-  <div class="concept-grid" id="concept-grid"></div>
-</div>
-
-</main>
-<footer class="footer">
-  <p>Informe Nómina Marzo 2026 · Costo empresa (devengos brutos) · No incluye descuentos ni retenciones ni factor prestacional · Empleados únicos: 1.966 · Fuente: Nómina_Marzo.xlsx</p>
-</footer>
-<script>
-const DATA = {"globals": {"total_costo": 9496150012.0, "total_emp": 1966, "n_prod": 27, "total_prod": 33898883000.0, "total_costos_contrato": 32841517400.0, "total_extras": 890396222.0, "total_sueldo": 5861825007.0, "total_aux": 2245482993.0, "total_vac": 68144422.0, "total_lic": 430283859.0, "total_mod": 4988741785.0, "total_moi": 4507408227.0, "admin_costo": 1126129213.0, "n_proyectos": 30, "sal_prom_mod_global": 2063732.4268960126, "sal_prom_moi_global": 4642354.882438316, "pers_mod_global": 1279, "pers_moi_global": 689, "total_cargos_prestacionales": 3406586086.1631, "total_costo_empresa": 12902736098.1631, "factor_prest_pct": 35.873339004315426, "pct_seg_social": 22.5, "pct_parafiscal": 9.0, "pct_prestaciones": 21.83, "pct_arl": 2.0}, "proyectos": [{"Proyecto": "0447 GEB LT RSO", "costo_total": 1739909627, "Auxilios y Subsidios": 542291399, "Horas Extras": 117568030, "Licencias/Permisos": 92709205, "Otros": 0, "Sueldo": 981807659, "Vacaciones": 5533334, "costo_MOD": 1145851253, "costo_MOI": 594058374, "sueldo_mod": 605068673.0, "pers_mod": 307, "sueldo_moi": 376738986, "pers_moi": 105, "produccion": 7139000000.0, "costos_contrato": 7045000000.0, "empleados": 417, "tipo": "productivo", "sal_promedio": 4172445.1486810553, "sal_prom_mod": 1970907.7296416939, "sal_prom_moi": 3587990.342857143, "pct_nom_prod": 0.24371895601624877, "pct_nom_costo": 0.24697084840312278, "cargos_prestacionales": 560631953.9947, "costo_total_empresa": 2300541580.9947, "factor_prestacional": 0.3222190079845451}, {"Proyecto": "0411 GEB  LT COLECTORA  CUSTECITAS TRAMO 1", "costo_total": 1391802871, "Auxilios y Subsidios": 370774741, "Horas Extras": 186709396, "Licencias/Permisos": 42912598, "Otros": 0, "Sueldo": 760008083, "Vacaciones": 31398053, "costo_MOD": 1001370563, "costo_MOI": 390432308, "sueldo_mod": 522858286.0, "pers_mod": 223, "sueldo_moi": 235502515, "pers_moi": 64, "produccion": 2405000000.0, "costos_contrato": 3498000000.0, "empleados": 287, "tipo": "productivo", "sal_promedio": 4849487.355400697, "sal_prom_mod": 2344655.99103139, "sal_prom_moi": 3679726.796875, "pct_nom_prod": 0.5787122124740125, "pct_nom_costo": 0.3978853261863922, "cargos_prestacionales": 464125770.4039, "costo_total_empresa": 1855928641.4039001, "factor_prestacional": 0.33347091033835063}, {"Proyecto": "0001 OFICINA PRINCIPAL", "costo_total": 1033369122, "Auxilios y Subsidios": 141295700, "Horas Extras": 378182, "Licencias/Permisos": 4735191, "Otros": 0, "Sueldo": 863164839, "Vacaciones": 23795210, "costo_MOD": 0, "costo_MOI": 1033369122, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 862664839, "pers_moi": 151, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 152, "tipo": "admin", "sal_promedio": 6798481.065789473, "sal_prom_mod": 0.0, "sal_prom_moi": 5713012.178807947, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 460444935.9687, "costo_total_empresa": 1493814057.9687, "factor_prestacional": 0.4455764413373869}, {"Proyecto": "0428 ITUANGO CW 16863", "costo_total": 887441050, "Auxilios y Subsidios": 47583519, "Horas Extras": 240191735, "Licencias/Permisos": 119572479, "Otros": 0, "Sueldo": 480093317, "Vacaciones": 0, "costo_MOD": 624529311, "costo_MOI": 262911739, "sueldo_mod": 315481955.0, "pers_mod": 96, "sueldo_moi": 164611362, "pers_moi": 38, "produccion": 2826000000.0, "costos_contrato": 2329000000.0, "empleados": 134, "tipo": "productivo", "sal_promedio": 6622694.402985075, "sal_prom_mod": 3286270.3645833335, "sal_prom_moi": 4331877.947368421, "pct_nom_prod": 0.31402726468506725, "pct_nom_costo": 0.3810395234006011, "cargos_prestacionales": 331694162.48109996, "costo_total_empresa": 1219135212.4811, "factor_prestacional": 0.3737647277879471}, {"Proyecto": "0440 GEB NUEVA S/E HUILA 230 KV", "costo_total": 482691071, "Auxilios y Subsidios": 122512187, "Horas Extras": 69249776, "Licencias/Permisos": 16053920, "Otros": 0, "Sueldo": 274458521, "Vacaciones": 416667, "costo_MOD": 271169103, "costo_MOI": 211521968, "sueldo_mod": 129589378.0, "pers_mod": 61, "sueldo_moi": 144869143, "pers_moi": 32, "produccion": 2628000000.0, "costos_contrato": 2468000000.0, "empleados": 122, "tipo": "productivo", "sal_promedio": 3956484.1885245903, "sal_prom_mod": 2124416.0327868853, "sal_prom_moi": 4527160.71875, "pct_nom_prod": 0.18367240144596653, "pct_nom_costo": 0.19557985048622367, "cargos_prestacionales": 168182408.6893, "costo_total_empresa": 650873479.6893001, "factor_prestacional": 0.34842659993870073}, {"Proyecto": "0456 GEB BOLÍVAR", "costo_total": 479988603, "Auxilios y Subsidios": 141665438, "Horas Extras": 43764353, "Licencias/Permisos": 7646691, "Otros": 17509, "Sueldo": 286894612, "Vacaciones": 0, "costo_MOD": 333519010, "costo_MOI": 146469593, "sueldo_mod": 166183790.0, "pers_mod": 98, "sueldo_moi": 99598479, "pers_moi": 24, "produccion": 3128000000.0, "costos_contrato": 2889000000.0, "empleados": 93, "tipo": "productivo", "sal_promedio": 5161167.774193549, "sal_prom_mod": 1695752.9591836734, "sal_prom_moi": 4149936.625, "pct_nom_prod": 0.15344904187979538, "pct_nom_costo": 0.1661435109034268, "cargos_prestacionales": 166786667.7746, "costo_total_empresa": 646775270.7746, "factor_prestacional": 0.34748047501994545}, {"Proyecto": "0426 CELSIA LT ESCOBAL", "costo_total": 368578918, "Auxilios y Subsidios": 111355496, "Horas Extras": 40507290, "Licencias/Permisos": 6097057, "Otros": 0, "Sueldo": 210005742, "Vacaciones": 613333, "costo_MOD": 241802381, "costo_MOI": 126776537, "sueldo_mod": 121142597.0, "pers_mod": 55, "sueldo_moi": 88829812, "pers_moi": 26, "produccion": 1533000000.0, "costos_contrato": 1279000000.0, "empleados": 81, "tipo": "productivo", "sal_promedio": 4550357.012345679, "sal_prom_mod": 2202592.672727273, "sal_prom_moi": 3416531.230769231, "pct_nom_prod": 0.24042982257012394, "pct_nom_costo": 0.2881774182955434, "cargos_prestacionales": 124755858.5586, "costo_total_empresa": 493334776.5586, "factor_prestacional": 0.33847800963645996}, {"Proyecto": "0457 SE ATLAS CAMPANO", "costo_total": 308983560, "Auxilios y Subsidios": 75254762, "Horas Extras": 3944963, "Licencias/Permisos": 19538424, "Otros": 0, "Sueldo": 210245411, "Vacaciones": 0, "costo_MOD": 57823822, "costo_MOI": 251159738, "sueldo_mod": 42374507.0, "pers_mod": 28, "sueldo_moi": 167870904, "pers_moi": 33, "produccion": 1067365600.0, "costos_contrato": 808523400.0, "empleados": 60, "tipo": "productivo", "sal_promedio": 5149726.0, "sal_prom_mod": 1513375.25, "sal_prom_moi": 5086997.090909091, "pct_nom_prod": 0.28948240415467763, "pct_nom_costo": 0.3821578447822289, "cargos_prestacionales": 113366541.0313, "costo_total_empresa": 422350101.0313, "factor_prestacional": 0.36690153039630974}, {"Proyecto": "0446 ISA LA MESA", "costo_total": 301076080, "Auxilios y Subsidios": 74525339, "Horas Extras": 40392600, "Licencias/Permisos": 11309205, "Otros": 0, "Sueldo": 174848936, "Vacaciones": 0, "costo_MOD": 171513220, "costo_MOI": 129562860, "sueldo_mod": 86113789.0, "pers_mod": 36, "sueldo_moi": 88735147, "pers_moi": 18, "produccion": 1598961400.0, "costos_contrato": 1292817200.0, "empleados": 54, "tipo": "productivo", "sal_promedio": 5575482.962962963, "sal_prom_mod": 2392049.6944444445, "sal_prom_moi": 4929730.388888889, "pct_nom_prod": 0.1882947768470208, "pct_nom_costo": 0.23288372091584178, "cargos_prestacionales": 105970606.5688, "costo_total_empresa": 407046686.5688, "factor_prestacional": 0.3519728520738014}, {"Proyecto": "0451 ENEL NV ESPERANZA", "costo_total": 278267259, "Auxilios y Subsidios": 77143386, "Horas Extras": 21145087, "Licencias/Permisos": 10812456, "Otros": 0, "Sueldo": 169166330, "Vacaciones": 0, "costo_MOD": 142851956, "costo_MOI": 135415303, "sueldo_mod": 69696330.0, "pers_mod": 41, "sueldo_moi": 99470000, "pers_moi": 20, "produccion": 1553000000.0, "costos_contrato": 1446000000.0, "empleados": 56, "tipo": "productivo", "sal_promedio": 4969058.196428572, "sal_prom_mod": 1699910.487804878, "sal_prom_moi": 4973500.0, "pct_nom_prod": 0.17918046297488732, "pct_nom_costo": 0.1924393215767635, "cargos_prestacionales": 96877106.194, "costo_total_empresa": 375144365.194, "factor_prestacional": 0.3481441062888394}, {"Proyecto": "0453 LT SAAP", "costo_total": 275634869, "Auxilios y Subsidios": 74582010, "Horas Extras": 18498604, "Licencias/Permisos": 25946851, "Otros": 0, "Sueldo": 156107404, "Vacaciones": 500000, "costo_MOD": 140286238, "costo_MOI": 135348631, "sueldo_mod": 67427595.0, "pers_mod": 42, "sueldo_moi": 88679809, "pers_moi": 24, "produccion": 1524200000.0, "costos_contrato": 1845624200.0, "empleados": 61, "tipo": "productivo", "sal_promedio": 4518604.409836066, "sal_prom_mod": 1605418.9285714286, "sal_prom_moi": 3694992.0416666665, "pct_nom_prod": 0.1808390427765385, "pct_nom_costo": 0.14934506656338814, "cargos_prestacionales": 89079138.81320001, "costo_total_empresa": 364714007.8132, "factor_prestacional": 0.32317804759745405}, {"Proyecto": "0452 LT CARRIELES", "costo_total": 273233297, "Auxilios y Subsidios": 79128687, "Horas Extras": 36367796, "Licencias/Permisos": 7373498, "Otros": 0, "Sueldo": 150363316, "Vacaciones": 0, "costo_MOD": 201753525, "costo_MOI": 71479772, "sueldo_mod": 109237863.0, "pers_mod": 42, "sueldo_moi": 41125453, "pers_moi": 13, "produccion": 619000000.0, "costos_contrato": 697000000.0, "empleados": 67, "tipo": "productivo", "sal_promedio": 4078108.9104477614, "sal_prom_mod": 2600901.5, "sal_prom_moi": 3163496.3846153845, "pct_nom_prod": 0.44141081906300483, "pct_nom_costo": 0.3920133385939742, "cargos_prestacionales": 91644612.1628, "costo_total_empresa": 364877909.1628, "factor_prestacional": 0.3354079212490709}, {"Proyecto": "0309 LINEAS SOGAMOSO 500KV TRAMO 2", "costo_total": 234943702, "Auxilios y Subsidios": 55914979, "Horas Extras": 2101373, "Licencias/Permisos": 16685257, "Otros": 0, "Sueldo": 160242093, "Vacaciones": 0, "costo_MOD": 102102838, "costo_MOI": 132840864, "sueldo_mod": 73194519.0, "pers_mod": 43, "sueldo_moi": 86860907, "pers_moi": 17, "produccion": 350000000.0, "costos_contrato": 507000000.0, "empleados": 66, "tipo": "productivo", "sal_promedio": 3559753.0606060605, "sal_prom_mod": 1702198.1162790698, "sal_prom_moi": 5109465.117647059, "pct_nom_prod": 0.67126772, "pct_nom_costo": 0.4633998067061144, "cargos_prestacionales": 86119040.6919, "costo_total_empresa": 321062742.6919, "factor_prestacional": 0.3665518162810766}, {"Proyecto": "0458 EPM NV ESPERANZA", "costo_total": 234535688, "Auxilios y Subsidios": 62498117, "Horas Extras": 27607996, "Licencias/Permisos": 870262, "Otros": 0, "Sueldo": 143559313, "Vacaciones": 0, "costo_MOD": 178729078, "costo_MOI": 55806610, "sueldo_mod": 102122289.0, "pers_mod": 54, "sueldo_moi": 41437024, "pers_moi": 12, "produccion": 1230000000.0, "costos_contrato": 1098000000.0, "empleados": 60, "tipo": "productivo", "sal_promedio": 3908928.1333333333, "sal_prom_mod": 1891153.5, "sal_prom_moi": 3453085.3333333335, "pct_nom_prod": 0.19067942113821137, "pct_nom_costo": 0.21360263023679418, "cargos_prestacionales": 85256700.36289999, "costo_total_empresa": 319792388.3629, "factor_prestacional": 0.36351269646818096}, {"Proyecto": "0370 ISA CARRIELES", "costo_total": 223009329, "Auxilios y Subsidios": 56497010, "Horas Extras": 29040007, "Licencias/Permisos": 3563764, "Otros": 0, "Sueldo": 133908548, "Vacaciones": 0, "costo_MOD": 145312409, "costo_MOI": 77696920, "sueldo_mod": 80355034.0, "pers_mod": 54, "sueldo_moi": 53304420, "pers_moi": 13, "produccion": 2015255800.0, "costos_contrato": 1521364200.0, "empleados": 67, "tipo": "productivo", "sal_promedio": 3328497.447761194, "sal_prom_mod": 1488056.1851851852, "sal_prom_moi": 4100340.0, "pct_nom_prod": 0.11066055683849167, "pct_nom_costo": 0.14658510368523198, "cargos_prestacionales": 80561030.85339999, "costo_total_empresa": 303570359.8534, "factor_prestacional": 0.3612451156848241}, {"Proyecto": "0455 ENEL INTEXZONA", "costo_total": 187545054, "Auxilios y Subsidios": 45066886, "Horas Extras": 307636, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 142170532, "Vacaciones": 0, "costo_MOD": 24321656, "costo_MOI": 163223398, "sueldo_mod": 15902537.0, "pers_mod": 11, "sueldo_moi": 126267995, "pers_moi": 18, "produccion": 223000000.0, "costos_contrato": 505000000.0, "empleados": 29, "tipo": "productivo", "sal_promedio": 6467070.827586207, "sal_prom_mod": 1445685.1818181819, "sal_prom_moi": 7014888.611111111, "pct_nom_prod": 0.8410092107623318, "pct_nom_costo": 0.37137634455445545, "cargos_prestacionales": 75916450.0556, "costo_total_empresa": 263461504.0556, "factor_prestacional": 0.40479046733805096}, {"Proyecto": "0454 ISA AMPL SAN MARCOS 500 KV", "costo_total": 173175110, "Auxilios y Subsidios": 45824323, "Horas Extras": 8483848, "Licencias/Permisos": 3426660, "Otros": 0, "Sueldo": 115440279, "Vacaciones": 0, "costo_MOD": 75245356, "costo_MOI": 97929754, "sueldo_mod": 43847072.0, "pers_mod": 24, "sueldo_moi": 71593207, "pers_moi": 16, "produccion": 1587100200.0, "costos_contrato": 1543188400.0, "empleados": 39, "tipo": "productivo", "sal_promedio": 4440387.435897436, "sal_prom_mod": 1826961.3333333333, "sal_prom_moi": 4474575.4375, "pct_nom_prod": 0.10911416305032284, "pct_nom_costo": 0.1122190330098386, "cargos_prestacionales": 64236712.91069999, "costo_total_empresa": 237411822.9107, "factor_prestacional": 0.37093502011172386}, {"Proyecto": "0414 GEB LT.NORTE FASE 3.", "costo_total": 123225161, "Auxilios y Subsidios": 32541306, "Horas Extras": 838055, "Licencias/Permisos": 662508, "Otros": 0, "Sueldo": 89183292, "Vacaciones": 0, "costo_MOD": 20503125, "costo_MOI": 102722036, "sueldo_mod": 11738292.0, "pers_mod": 12, "sueldo_moi": 77445000, "pers_moi": 22, "produccion": 169000000.0, "costos_contrato": 364000000.0, "empleados": 34, "tipo": "productivo", "sal_promedio": 3624269.4411764704, "sal_prom_mod": 978191.0, "sal_prom_moi": 3520227.272727273, "pct_nom_prod": 0.7291429644970414, "pct_nom_costo": 0.3385306620879121, "cargos_prestacionales": 47825436.9486, "costo_total_empresa": 171050597.9486, "factor_prestacional": 0.38811421758742926}, {"Proyecto": "0308 LINEAS SOGAMOSO 500KV TRAMO 1", "costo_total": 114814312, "Auxilios y Subsidios": 20858869, "Horas Extras": 0, "Licencias/Permisos": 4130001, "Otros": 0, "Sueldo": 89825442, "Vacaciones": 0, "costo_MOD": 14227641, "costo_MOI": 100586671, "sueldo_mod": 10121262.0, "pers_mod": 9, "sueldo_moi": 79704180, "pers_moi": 9, "produccion": 205000000.0, "costos_contrato": 182000000.0, "empleados": 18, "tipo": "productivo", "sal_promedio": 6378572.888888889, "sal_prom_mod": 1124584.6666666667, "sal_prom_moi": 8856020.0, "pct_nom_prod": 0.5600698146341463, "pct_nom_costo": 0.6308478681318681, "cargos_prestacionales": 47903908.2186, "costo_total_empresa": 162718220.2186, "factor_prestacional": 0.4172294149060441}, {"Proyecto": "0431 ISA DIAMETRO 5 SABANALARGA", "costo_total": 66206821, "Auxilios y Subsidios": 12093297, "Horas Extras": 758126, "Licencias/Permisos": 11766667, "Otros": 0, "Sueldo": 36100906, "Vacaciones": 5487825, "costo_MOD": 17012733, "costo_MOI": 49194088, "sueldo_mod": 8017573.0, "pers_mod": 6, "sueldo_moi": 28083333, "pers_moi": 7, "produccion": 1145000000.0, "costos_contrato": 779000000.0, "empleados": 14, "tipo": "productivo", "sal_promedio": 4729058.642857143, "sal_prom_mod": 1336262.1666666667, "sal_prom_moi": 4011904.714285714, "pct_nom_prod": 0.057822551091703055, "pct_nom_costo": 0.08498950064184853, "cargos_prestacionales": 19491422.8598, "costo_total_empresa": 85698243.8598, "factor_prestacional": 0.2944020354005519}, {"Proyecto": "037 EJECUTIVA", "costo_total": 50000000, "Auxilios y Subsidios": 10000000, "Horas Extras": 0, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 40000000, "Vacaciones": 0, "costo_MOD": 0, "costo_MOI": 50000000, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 40000000, "pers_moi": 3, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 3, "tipo": "admin", "sal_promedio": 16666666.666666666, "sal_prom_mod": 0.0, "sal_prom_moi": 13333333.333333334, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 21332000.0, "costo_total_empresa": 71332000.0, "factor_prestacional": 0.42664}, {"Proyecto": "0424 ENEL SE EL UVERO", "costo_total": 48057333, "Auxilios y Subsidios": 2057333, "Horas Extras": 0, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 46000000, "Vacaciones": 0, "costo_MOD": 0, "costo_MOI": 48057333, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 46000000, "pers_moi": 3, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 3, "tipo": "productivo", "sal_promedio": 16019111.0, "sal_prom_mod": 0.0, "sal_prom_moi": 15333333.333333334, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 24531800.0, "costo_total_empresa": 72589133.0, "factor_prestacional": 0.5104694428215565}, {"Proyecto": "0007 PERSONAL DE LA CASA", "costo_total": 42760091, "Auxilios y Subsidios": 6400394, "Horas Extras": 0, "Licencias/Permisos": 133030, "Otros": 0, "Sueldo": 36226667, "Vacaciones": 0, "costo_MOD": 35760091, "costo_MOI": 7000000, "sueldo_mod": 30226667.0, "pers_mod": 10, "sueldo_moi": 6000000, "pers_moi": 1, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 11, "tipo": "admin", "sal_promedio": 3887281.0, "sal_prom_mod": 3022666.7, "sal_prom_moi": 6000000.0, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 19319681.5111, "costo_total_empresa": 62079772.5111, "factor_prestacional": 0.45181572488000554}, {"Proyecto": "0438 ENEL SE NUEVA ESTANCIA", "costo_total": 36360778, "Auxilios y Subsidios": 8278047, "Horas Extras": 1792651, "Licencias/Permisos": 6672508, "Otros": 0, "Sueldo": 19617572, "Vacaciones": 0, "costo_MOD": 14014831, "costo_MOI": 22345947, "sueldo_mod": 8384239.0, "pers_mod": 4, "sueldo_moi": 11233333, "pers_moi": 4, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 8, "tipo": "productivo", "sal_promedio": 4545097.25, "sal_prom_mod": 2096059.75, "sal_prom_moi": 2808333.25, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 11026736.2126, "costo_total_empresa": 47387514.2126, "factor_prestacional": 0.3032590835267606}, {"Proyecto": "0465 CELSIA SAHAGÚN 500kV", "costo_total": 35795141, "Auxilios y Subsidios": 6276657, "Horas Extras": 101818, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 29416666, "Vacaciones": 0, "costo_MOD": 0, "costo_MOI": 35795141, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 29416666, "pers_moi": 6, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 5, "tipo": "productivo", "sal_promedio": 7159028.2, "sal_prom_mod": 0.0, "sal_prom_moi": 4902777.666666667, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 15719980.6478, "costo_total_empresa": 51515121.6478, "factor_prestacional": 0.43916521093742866}, {"Proyecto": "0464 LT PUERTOS DE SANTANDER", "costo_total": 33326674, "Auxilios y Subsidios": 7826674, "Horas Extras": 0, "Licencias/Permisos": 11716667, "Otros": 0, "Sueldo": 13383333, "Vacaciones": 400000, "costo_MOD": 6266674, "costo_MOI": 27060000, "sueldo_mod": 3800000.0, "pers_mod": 2, "sueldo_moi": 9583333, "pers_moi": 1, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 6, "tipo": "productivo", "sal_promedio": 5554445.666666667, "sal_prom_mod": 1900000.0, "sal_prom_moi": 9583333.0, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 7137331.4889, "costo_total_empresa": 40464005.4889, "factor_prestacional": 0.21416273009721884}, {"Proyecto": "0461 LT ATLAS CAMPANO", "costo_total": 29814265, "Auxilios y Subsidios": 8355205, "Horas Extras": 199225, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 21259835, "Vacaciones": 0, "costo_MOD": 13211293, "costo_MOI": 16602972, "sueldo_mod": 9503168.0, "pers_mod": 17, "sueldo_moi": 11756667, "pers_moi": 4, "produccion": 499000000.0, "costos_contrato": 323000000.0, "empleados": 21, "tipo": "productivo", "sal_promedio": 1419726.9047619049, "sal_prom_mod": 559009.8823529412, "sal_prom_moi": 2939166.75, "pct_nom_prod": 0.059748026052104206, "pct_nom_costo": 0.09230422600619195, "cargos_prestacionales": 11400625.8805, "costo_total_empresa": 41214890.8805, "factor_prestacional": 0.3823882923325462}, {"Proyecto": "0413 GEB LT COLECTORA LA LOMA TRAMO 2", "costo_total": 19304226, "Auxilios y Subsidios": 4130192, "Horas Extras": 447675, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 14726359, "Vacaciones": 0, "costo_MOD": 9563678, "costo_MOI": 9740548, "sueldo_mod": 7126359.0, "pers_mod": 4, "sueldo_moi": 7600000, "pers_moi": 2, "produccion": 454000000.0, "costos_contrato": 394000000.0, "empleados": 6, "tipo": "productivo", "sal_promedio": 3217371.0, "sal_prom_mod": 1781589.75, "sal_prom_moi": 3800000.0, "pct_nom_prod": 0.04252032158590308, "pct_nom_costo": 0.04899549746192893, "cargos_prestacionales": 7994584.8797, "costo_total_empresa": 27298810.8797, "factor_prestacional": 0.4141365149630967}, {"Proyecto": "0460 CELSIA CARRETO", "costo_total": 13500000, "Auxilios y Subsidios": 1500000, "Horas Extras": 0, "Licencias/Permisos": 0, "Otros": 0, "Sueldo": 12000000, "Vacaciones": 0, "costo_MOD": 0, "costo_MOI": 13500000, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 12000000, "pers_moi": 2, "produccion": 0.0, "costos_contrato": 27000000.0, "empleados": 2, "tipo": "productivo", "sal_promedio": 6750000.0, "sal_prom_mod": 0.0, "sal_prom_moi": 6000000.0, "pct_nom_prod": null, "pct_nom_costo": 0.5, "cargos_prestacionales": 6399600.0, "costo_total_empresa": 19899600.0, "factor_prestacional": 0.47404444444444443}, {"Proyecto": "0437 ENEL BOCHICA", "costo_total": 8800000, "Auxilios y Subsidios": 1251040, "Horas Extras": 0, "Licencias/Permisos": 5948960, "Otros": 0, "Sueldo": 1600000, "Vacaciones": 0, "costo_MOD": 0, "costo_MOI": 8800000, "sueldo_mod": 0.0, "pers_mod": 0, "sueldo_moi": 1600000, "pers_moi": 1, "produccion": 0.0, "costos_contrato": 0.0, "empleados": 1, "tipo": "productivo", "sal_promedio": 8800000.0, "sal_prom_mod": 0.0, "sal_prom_moi": 1600000.0, "pct_nom_prod": null, "pct_nom_costo": null, "cargos_prestacionales": 853280.0, "costo_total_empresa": 9653280.0, "factor_prestacional": 0.09696363636363636}], "conceptos": [{"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DE ALIMENTACION DIARIO", "Vlr_Nomina": 1242273141.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DE ALIMENTACION", "Vlr_Nomina": 552826336.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "SUBSIDIO DE TRANSPORTE", "Vlr_Nomina": 156988027.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DE DESPLAZAMIENTO", "Vlr_Nomina": 97062000.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DE ALOJAMIENTO", "Vlr_Nomina": 68324666.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO RODAMIENTO", "Vlr_Nomina": 41850667.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO UNICO PROYECTO", "Vlr_Nomina": 41763059.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "BONO", "Vlr_Nomina": 22020775.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO EMPRESA DIAS INICIALES INCAPACIDAD", "Vlr_Nomina": 9600480.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "BONO DE PRODUCTIVIDAD", "Vlr_Nomina": 6300000.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "SUBSIDIO DE TRANSPORTE PERIODO ANTERIOR", "Vlr_Nomina": 3213316.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DE GUARDERIA", "Vlr_Nomina": 1215000.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO EMPRESA INCAPACIDAD", "Vlr_Nomina": 1062366.0}, {"categoria": "Auxilios y Subsidios", "concept_descrip": "AUXILIO DIAS INICIALES INCAPACIDAD  AMBUL ADMIN 100%", "Vlr_Nomina": 983160.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA EXTRA DIURNA ORDINARIA 1.25%", "Vlr_Nomina": 450475720.0}, {"categoria": "Horas Extras", "concept_descrip": "DOMINICAL O FESTIVO AL 180% LEY 2466", "Vlr_Nomina": 264148758.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA RECARGO NOCTURNO DOMINICAL O FESTIVO 2.10%", "Vlr_Nomina": 40277709.0}, {"categoria": "Horas Extras", "concept_descrip": "DOMINICAL AL 80% LEY 2466", "Vlr_Nomina": 39587215.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA RECARGO NOCTURNO NORMAL 0.35%", "Vlr_Nomina": 33268019.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA EXTRA NOCTURNA ORDINARIA 1.75%", "Vlr_Nomina": 32088948.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA EXTRA DIURNA DOMINICAL O FESTIVO 2.00%", "Vlr_Nomina": 16059291.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA EXTRA NOCTURNA DOMINICAL O FESTIVO 2.50%", "Vlr_Nomina": 9838435.0}, {"categoria": "Horas Extras", "concept_descrip": "HORA COMPENSATORIA 100%", "Vlr_Nomina": 4666038.0}, {"categoria": "Horas Extras", "concept_descrip": "AJUSTE HORAS EXTRAS", "Vlr_Nomina": -13911.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "PERMISO POR DESCANSO", "Vlr_Nomina": 320744680.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "INCAPACIDAD GENERAL AMBULATORIA", "Vlr_Nomina": 24182755.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "PRORROGA INCAPACIDAD GENERAL AMBULATORIA", "Vlr_Nomina": 22568369.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "LICENCIA DE MATERNIDAD", "Vlr_Nomina": 17786443.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "LICENCIA DE PATERNIDAD O LEY MARIA", "Vlr_Nomina": 17061652.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "PRORROGA INCAPACIDAD ACCIDENTE DE TRABAJO", "Vlr_Nomina": 15955598.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "INCAPACIDAD ACCIDENTE DE TRABAJO", "Vlr_Nomina": 5910631.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "LICENCIA REMUNERADA POR LUTO", "Vlr_Nomina": 3683939.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "AJUSTE INCAPACIDAD", "Vlr_Nomina": 1152107.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "PERMISO REMUNERADO", "Vlr_Nomina": 833333.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "LICENCIA REMUNERADA", "Vlr_Nomina": 460062.0}, {"categoria": "Licencias/Permisos", "concept_descrip": "PERMISO NO REMUNERADO POR HORAS", "Vlr_Nomina": -55710.0}, {"categoria": "Otros", "concept_descrip": "REINTEGRO", "Vlr_Nomina": 17509.0}, {"categoria": "Sueldo", "concept_descrip": "SUELDO BASICO", "Vlr_Nomina": 5838096288.0}, {"categoria": "Sueldo", "concept_descrip": "SUELDO PERIODO ANTERIOR BASICO", "Vlr_Nomina": 20669010.0}, {"categoria": "Sueldo", "concept_descrip": "RETROACTIVO SUELDO BASICO", "Vlr_Nomina": 1896376.0}, {"categoria": "Sueldo", "concept_descrip": "AJUSTE DE SUELDO BASICO", "Vlr_Nomina": 1163333.0}, {"categoria": "Vacaciones", "concept_descrip": "VACACIONES DISFRUTADAS", "Vlr_Nomina": 39541883.0}, {"categoria": "Vacaciones", "concept_descrip": "VACACIONES EN DINERO", "Vlr_Nomina": 28602539.0}]};
-
-// ══════════════════════════════════════
-// GLOBALS & HELPERS
-// ══════════════════════════════════════
-const G=DATA.globals, PROJ=DATA.proyectos, CONC=DATA.conceptos;
-const ADMIN=['0001 OFICINA PRINCIPAL','037 EJECUTIVA','0007 PERSONAL DE LA CASA'];
-const CAT_COLS=['#1a56db','#059669','#dc2626','#d97706','#0891b2','#94a3b8'];
-const CAT_MAP={'Sueldo':'#1a56db','Auxilios y Subsidios':'#059669','Horas Extras':'#dc2626','Licencias/Permisos':'#d97706','Vacaciones':'#0891b2','Otros':'#94a3b8'};
-const CATS=['Sueldo','Auxilios y Subsidios','Horas Extras','Licencias/Permisos','Vacaciones'];
-
-const fmtM=v=>{if(v==null)return'—';return'$'+(v/1e6).toLocaleString('es-CO',{minimumFractionDigits:1,maximumFractionDigits:1})+' M';};
-const fmtN=v=>v==null?'—':new Intl.NumberFormat('es-CO').format(Math.round(v));
-const fmtP=v=>v==null?'—':(v*100).toFixed(1)+'%';
-const semCls=p=>p>0.35?'pct-red':p>0.20?'pct-amber':'pct-green';
-const semCol=p=>p>0.35?'#dc2626':p>0.20?'#d97706':'#059669';
-
-Chart.defaults.font.family="'DM Sans',sans-serif";
-Chart.defaults.font.size=11;
-Chart.defaults.color='#64748b';
-Chart.defaults.plugins.legend.labels.boxWidth=11;
-Chart.defaults.plugins.legend.labels.padding=11;
-
-// ── FILTER STATE ──
-const filterState={costos:new Set(),prod:new Set(),modmoi:new Set(),extras:new Set(),comp:new Set()};
-const chartInstances={};
-
-function filteredProj(key){
-  const s=filterState[key];
-  return s.size===0?PROJ:PROJ.filter(p=>s.has(p.Proyecto));
-}
-
-function addFilter(key,sel){
-  const val=sel.value; if(!val)return;
-  filterState[key].add(val);
-  sel.value='';
-  renderTags(key);
-  applyFilter(key);
-}
-function removeFilter(key,val){
-  filterState[key].delete(val);
-  renderTags(key);
-  applyFilter(key);
-}
-function clearFilter(key){
-  filterState[key].clear();
-  renderTags(key);
-  applyFilter(key);
-}
-function renderTags(key){
-  const el=document.getElementById('ft-'+key);
-  if(!el)return;
-  el.innerHTML=[...filterState[key]].map(v=>`<span class="filter-tag" onclick="removeFilter('${key}','${v.replace(/'/g,"\\'")}')"><span>${v.length>28?v.substring(0,28)+'…':v}</span><span class="remove">×</span></span>`).join('');
-}
-function applyFilter(key){
-  const fn={costos:refreshCostos,prod:refreshProd,modmoi:refreshModMoi,extras:refreshExtras,comp:refreshComp};
-  if(fn[key])fn[key]();
-}
-
-function populateSelects(){
-  const ids=['fs-costos','fs-prod','fs-modmoi','fs-extras','fs-comp'];
-  ids.forEach(id=>{
-    const sel=document.getElementById(id); if(!sel)return;
-    PROJ.forEach(p=>{
-      const opt=document.createElement('option');
-      opt.value=p.Proyecto;
-      opt.textContent=p.Proyecto;
-      sel.appendChild(opt);
-    });
-  });
-}
-
-function destroyChart(id){
-  if(chartInstances[id]){chartInstances[id].destroy();delete chartInstances[id];}
-}
-function mkChart(id,cfg){
-  destroyChart(id);
-  chartInstances[id]=new Chart(document.getElementById(id),cfg);
-  return chartInstances[id];
-}
-
-// ══════════════════════════════════════
-// TAB
-// ══════════════════════════════════════
-function showTab(id,btn){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-
-// ══════════════════════════════════════
-// RESUMEN
-// ══════════════════════════════════════
-function mkKpi(l,v,s,c,wide){
-  return `<div class="kpi-card${wide?' kpi-wide':''}" style="--kc:${c}">
-    <div class="kpi-label">${l}</div>
-    <div class="kpi-value">${v}</div>
-    ${s?`<div class="kpi-sub">${s}</div>`:''}
-  </div>`;
-}
-
-function renderResumen(){
-
-  // ── BLOQUE 1: Contexto del mes (5 tarjetas) ──
-  // Producción Total | Costos Contratos | Proyectos activos | Costo Nómina (wide, con nota) | Empleados
-  document.getElementById('kpi-r1').innerHTML=
-    mkKpi('PRODUCCIÓN TOTAL',fmtM(G.total_prod),'','#059669')+
-    mkKpi('COSTOS TOTALES',fmtM(G.total_costos_contrato),'','#0891b2')+
-    mkKpi('PROYECTOS ACTIVOS',G.n_prod,'Con producción en el mes','#1a56db')+
-    mkKpi('COSTO NÓMINA (sin prest.)',fmtM(G.total_costo),'⚠ Sin factor prestacional','#0d1f3c')+
-    mkKpi('COSTO EMPRESA (estimado)',fmtM(G.total_costo_empresa),'Incluye SS + parafiscales + prestaciones','#7c3aed')+
-    mkKpi('EMPLEADOS ÚNICOS','1.966','','#1a56db');
-
-  // ── BLOQUE 2: Mano de Obra (6 tarjetas — 3 MOD + 3 MOI) ──
-  document.getElementById('kpi-r2').innerHTML=
-    // MOD — fondo azul tenue
-    `<div class="kpi-card kpi-group-left" style="--kc:#1a56db;background:rgba(26,86,219,.05);border-color:rgba(26,86,219,.2)">
-      <div class="kpi-label" style="color:#1a56db">M.O. DIRECTA — COSTO</div>
-      <div class="kpi-value">${fmtM(G.total_mod)}</div>
-      <div class="kpi-sub">${fmtP(G.total_mod/G.total_costo)} del total nómina</div>
-    </div>
-    <div class="kpi-card kpi-group-mid" style="--kc:#1a56db;background:rgba(26,86,219,.05);border-color:rgba(26,86,219,.2)">
-      <div class="kpi-label" style="color:#1a56db">PERSONAS MOD</div>
-      <div class="kpi-value">${fmtN(G.pers_mod_global)}</div>
-      <div class="kpi-sub">Según sueldo básico</div>
-    </div>
-    <div class="kpi-card kpi-group-right" style="--kc:#1a56db;background:rgba(26,86,219,.05);border-color:rgba(26,86,219,.2)">
-      <div class="kpi-label" style="color:#1a56db">SAL. PROM. MOD</div>
-      <div class="kpi-value">${fmtM(G.sal_prom_mod_global)}</div>
-      <div class="kpi-sub">Sueldo básico / persona</div>
-    </div>` +
-    // MOI — fondo cyan tenue
-    `<div class="kpi-card kpi-group-left" style="--kc:#0891b2;background:rgba(8,145,178,.05);border-color:rgba(8,145,178,.2)">
-      <div class="kpi-label" style="color:#0891b2">M.O. INDIRECTA — COSTO</div>
-      <div class="kpi-value">${fmtM(G.total_moi)}</div>
-      <div class="kpi-sub">${fmtP(G.total_moi/G.total_costo)} del total nómina</div>
-    </div>
-    <div class="kpi-card kpi-group-mid" style="--kc:#0891b2;background:rgba(8,145,178,.05);border-color:rgba(8,145,178,.2)">
-      <div class="kpi-label" style="color:#0891b2">PERSONAS MOI</div>
-      <div class="kpi-value">${fmtN(G.pers_moi_global)}</div>
-      <div class="kpi-sub">Según sueldo básico</div>
-    </div>
-    <div class="kpi-card kpi-group-right" style="--kc:#0891b2;background:rgba(8,145,178,.05);border-color:rgba(8,145,178,.2)">
-      <div class="kpi-label" style="color:#0891b2">SAL. PROM. MOI</div>
-      <div class="kpi-value">${fmtM(G.sal_prom_moi_global)}</div>
-      <div class="kpi-sub">Sueldo básico / persona</div>
-    </div>`;
-
-  // ── BLOQUE 3: Composición nómina (7 tarjetas con mini barra visual) ──
-  const _pctSS=G.pct_seg_social+G.pct_parafiscal, _pctPR=G.pct_prestaciones;
-  const _ssGlobal=G.total_cargos_prestacionales*_pctSS/(_pctSS+_pctPR);
-  const _prGlobal=G.total_cargos_prestacionales*_pctPR/(_pctSS+_pctPR);
-  const compItems=[
-    {l:'SUELDO BÁSICO',      v:G.total_sueldo,  c:'#0d1f3c'},
-    {l:'AUXILIOS Y SUBS.',   v:G.total_aux,     c:'#059669'},
-    {l:'HORAS EXTRAS',       v:G.total_extras,  c:'#dc2626'},
-    {l:'LICENCIAS',          v:G.total_lic,     c:'#d97706'},
-    {l:'VACACIONES',         v:G.total_vac,     c:'#0891b2'},
-    {l:'SEG. SOCIAL+PARAF.', v:_ssGlobal,       c:'#7c3aed'},
-    {l:'PRESTACIONES',       v:_prGlobal,       c:'#9333ea'},
-  ];
-  const maxComp=Math.max(...compItems.map(i=>i.v));
-  document.getElementById('kpi-r3').innerHTML=compItems.map(k=>`
-    <div class="kpi-card" style="--kc:${k.c}">
-      <div class="kpi-label">${k.l}</div>
-      <div class="kpi-value" style="font-size:16px">${fmtM(k.v)}</div>
-      <div style="margin:6px 0 2px;height:4px;background:var(--light);border-radius:4px;overflow:hidden">
-        <div style="height:100%;width:${(k.v/maxComp*100).toFixed(1)}%;background:${k.c};border-radius:4px;transition:width .5s"></div>
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="sec-lbl">Quiénes Somos</div>
+      <h2 class="sec-title">Transformamos la complejidad técnica en <span style="color:var(--teal)">precisión operativa</span></h2>
+      <p class="sec-sub" style="margin-bottom:16px">En Metricom, somos el aliado estratégico de la infraestructura tecnológica en Colombia. Con más de 23 años de experiencia en el sector TIC, nos especializamos en transformar la complejidad técnica en precisión operativa mediante soluciones de vanguardia para la prueba, medición y diagnóstico de redes y sistemas de telecomunicaciones. No solo suministramos equipos; garantizamos la confiabilidad de las redes que impulsan la transformación digital del país. Nuestra trayectoria nos ha permitido acompañar a operadores, integradores y organizaciones del sector público y privado, aportando conocimiento técnico de clase mundial y tecnología de alto desempeño.</p>
+      <div class="about-feats">
+        <div class="about-f"><div class="about-f-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Confiabilidad</h4><p>Equipos certificados de fabricantes líderes mundiales</p></div>
+        <div class="about-f"><div class="about-f-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h4>Capacitación</h4><p>Formación técnica con profesionales del sector</p></div>
+        <div class="about-f"><div class="about-f-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h4>Servicio Técnico</h4><p>Calibración, reparación y mantenimiento</p></div>
+        <div class="about-f"><div class="about-f-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.659.003-1.25.396-1.51 1z"/></svg></div><h4>Consultoría</h4><p>Asesoría técnica para proyectos complejos</p></div>
       </div>
-      <div class="kpi-sub">${fmtP(k.v/G.total_costo)}</div>
-    </div>`).join('');
-
-  // ── GRÁFICAS ──
-  mkChart('ch-res-comp',{type:'doughnut',data:{
-    labels:CATS,
-    datasets:[{data:[G.total_sueldo,G.total_aux,G.total_extras,G.total_lic,G.total_vac],backgroundColor:CAT_COLS,borderWidth:3,borderColor:'#fff',hoverOffset:7}]
-  },options:{cutout:'62%',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10},padding:8,boxWidth:10}},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${fmtM(ctx.raw)} (${(ctx.raw/G.total_costo*100).toFixed(1)}%)`}}}}});
-
-  mkChart('ch-res-modmoi',{type:'doughnut',data:{
-    labels:['M.O. Directa','M.O. Indirecta'],
-    datasets:[{data:[G.total_mod,G.total_moi],backgroundColor:['#1a56db','#0891b2'],borderWidth:3,borderColor:'#fff',hoverOffset:7}]
-  },options:{cutout:'62%',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10},padding:8,boxWidth:10}},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${fmtM(ctx.raw)} (${(ctx.raw/(G.total_mod+G.total_moi)*100).toFixed(1)}%)`}}}}});
-
-  // ── BARRAS ──
-  const top15=PROJ.slice(0,15),mx=top15[0].costo_total_empresa||top15[0].costo_total;
-  document.getElementById('bars-resumen').innerHTML=top15.map(p=>`
-    <div class="bar-row" style="margin-bottom:5px">
-      <div class="bar-label" title="${p.Proyecto}" style="width:175px;font-size:10.5px">${p.Proyecto}</div>
-      <div class="bar-track" style="height:8px"><div class="bar-fill" style="width:${(p.costo_total_empresa||p.costo_total)/mx*100}%;background:${ADMIN.includes(p.Proyecto)?'#ea580c':'#1a56db'}"></div></div>
-      <div class="bar-val" style="font-size:10.5px;width:70px">${fmtM(p.costo_total_empresa||p.costo_total)}</div>
-    </div>`).join('');
-}
-
-// ══════════════════════════════════════
-// COSTOS
-// ══════════════════════════════════════
-function refreshCostos(){
-  const fp=filteredProj('costos');
-  const top20=fp.slice(0,20);
-
-  destroyChart('ch-costo-bar');
-  mkChart('ch-costo-bar',{type:'bar',data:{
-    labels:top20.map(p=>p.Proyecto.length>28?p.Proyecto.substring(0,28)+'…':p.Proyecto),
-    datasets:[{data:top20.map(p=>(p.costo_total_empresa||p.costo_total)/1e6),backgroundColor:top20.map(p=>ADMIN.includes(p.Proyecto)?'rgba(234,88,12,.8)':'rgba(26,86,219,.8)'),borderRadius:4,borderSkipped:false}]
-  },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`$${ctx.raw.toFixed(1)} M`}}},scales:{x:{grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>`$${v} M`}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
-
-  const top12=fp.slice(0,12),cl=['#1a56db','#dc2626','#059669','#0891b2','#d97706'],lb=['Sueldo','H.Extras','Auxilios','Vacaciones','Licencias'];
-  destroyChart('ch-stacked');
-  mkChart('ch-stacked',{type:'bar',data:{
-    labels:top12.map(p=>p.Proyecto.length>26?p.Proyecto.substring(0,26)+'…':p.Proyecto),
-    datasets:CATS.map((c,i)=>({label:lb[i],data:top12.map(p=>(p[c]||0)/1e6),backgroundColor:cl[i],borderRadius:i===4?4:0,borderSkipped:false}))
-  },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: $${ctx.raw.toFixed(1)} M`}}},scales:{x:{stacked:true,ticks:{callback:v=>`$${v} M`},grid:{color:'rgba(0,0,0,.05)'}},y:{stacked:true,grid:{display:false},ticks:{font:{size:10}}}}}});
-
-  // Table
-  const tot=G.total_costo_empresa;
-  let html='';
-  fp.forEach(p=>{
-    const vl=(p['Vacaciones']||0)+(p['Licencias/Permisos']||0),isA=ADMIN.includes(p.Proyecto);
-    const emp=p.costo_total_empresa||p.costo_total, fct=p.factor_prestacional||0;
-    html+=`<tr class="${isA?'admin-row':''}"><td class="bold">${p.Proyecto}</td><td class="num">${fmtN(p.empleados)}</td><td class="num">${fmtM(p.costo_total)}</td><td class="num bold" style="color:#7c3aed">${fmtM(emp)}</td><td class="num">${(fct*100).toFixed(1)}%</td><td class="num">${fmtM(p['Sueldo']||0)}</td><td class="num">${fmtM(p['Horas Extras']||0)}</td><td class="num">${fmtM(p['Auxilios y Subsidios']||0)}</td><td class="num">${fmtM(vl)}</td><td class="num">${(emp/tot*100).toFixed(1)}%</td><td><span class="badge ${isA?'badge-admin':'badge-prod'}">${isA?'Admin':'Prod.'}</span></td></tr>`;
-  });
-  const ts=fp.reduce((a,p)=>a+(p['Sueldo']||0),0),te=fp.reduce((a,p)=>a+(p['Horas Extras']||0),0),ta=fp.reduce((a,p)=>a+(p['Auxilios y Subsidios']||0),0),tvl=fp.reduce((a,p)=>a+(p['Vacaciones']||0)+(p['Licencias/Permisos']||0),0),tc=fp.reduce((a,p)=>a+p.costo_total,0),tce=fp.reduce((a,p)=>a+(p.costo_total_empresa||p.costo_total),0);
-  const empTotal=filterState['costos'].size===0?'1.966':fmtN(fp.reduce((a,p)=>a+p.empleados,0));
-  html+=`<tr class="total-row"><td class="bold">TOTAL</td><td class="num bold">${empTotal}</td><td class="num bold">${fmtM(tc)}</td><td class="num bold" style="color:#7c3aed">${fmtM(tce)}</td><td class="num bold">${(G.factor_prest_pct).toFixed(1)}%</td><td class="num bold">${fmtM(ts)}</td><td class="num bold">${fmtM(te)}</td><td class="num bold">${fmtM(ta)}</td><td class="num bold">${fmtM(tvl)}</td><td class="num bold">100%</td><td></td></tr>`;
-  document.getElementById('tbody-costos').innerHTML=html;
-}
-
-// ══════════════════════════════════════
-// PRODUCCION
-// ══════════════════════════════════════
-function refreshProd(){
-  const fp=filteredProj('prod');
-  // Use costo_total_empresa as the reference cost
-  fp.forEach(p=>{
-    p._pct_emp_prod = p.produccion>0 ? p.costo_total_empresa/p.produccion : null;
-    p._pct_emp_costo = p.costos_contrato>0 ? p.costo_total_empresa/p.costos_contrato : null;
-  });
-  const sorted=[...fp].filter(p=>p._pct_emp_prod!=null).sort((a,b)=>b._pct_emp_prod-a._pct_emp_prod).slice(0,18);
-
-  destroyChart('ch-pct-prod');
-  mkChart('ch-pct-prod',{type:'bar',data:{
-    labels:sorted.map(p=>p.Proyecto.length>32?p.Proyecto.substring(0,32)+'…':p.Proyecto),
-    datasets:[{data:sorted.map(p=>p._pct_emp_prod*100),backgroundColor:sorted.map(p=>semCol(p._pct_emp_prod)),borderRadius:4}]
-  },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.raw.toFixed(1)}%`}}},scales:{x:{grid:{color:'rgba(0,0,0,.05)'},ticks:{callback:v=>`${v}%`},max:sorted.length?Math.ceil(sorted[0]._pct_emp_prod*100*1.18):100},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
-
-  let html='';
-  fp.forEach(p=>{
-    const pep=p._pct_emp_prod, pec=p._pct_emp_costo;
-    const cemp=p.costo_total_empresa||p.costo_total;
-    html+=`<tr>
-      <td class="bold">${p.Proyecto}</td><td class="num">${fmtN(p.empleados)}</td>
-      <td class="num">${p.produccion>0?fmtM(p.produccion):'—'}</td>
-      <td class="num ${pep!=null?semCls(pep):''}">${pep!=null?(pep*100).toFixed(1)+'%':'S/P'}</td>
-      <td class="num">${p.costos_contrato>0?fmtM(p.costos_contrato):'—'}</td>
-      <td class="num ${pec!=null?semCls(pec):''}">${pec!=null?(pec*100).toFixed(1)+'%':'S/P'}</td>
-      <td class="num bold" style="color:#7c3aed">${fmtM(cemp)}</td>
-    </tr>`;
-  });
-  const tp=fp.reduce((a,p)=>a+p.produccion,0),tc2=fp.filter(p=>p.costos_contrato>0).reduce((a,p)=>a+p.costos_contrato,0),tne=fp.reduce((a,p)=>a+(p.costo_total_empresa||p.costo_total),0);
-  const empProd=filterState['prod'].size===0?'1.966':fmtN(fp.reduce((a,p)=>a+p.empleados,0));
-  html+=`<tr class="total-row"><td class="bold">TOTAL</td><td class="num bold">${empProd}</td>
-    <td class="num bold">${fmtM(tp)}</td><td class="num bold ${tp>0?semCls(tne/tp):''}">${tp>0?(tne/tp*100).toFixed(1)+'%':'—'}</td>
-    <td class="num bold">${fmtM(tc2)}</td><td class="num bold ${tc2>0?semCls(tne/tc2):''}">${tc2>0?(tne/tc2*100).toFixed(1)+'%':'—'}</td>
-    <td class="num bold" style="color:#7c3aed">${fmtM(tne)}</td></tr>`;
-  document.getElementById('tbody-prod').innerHTML=html;
-}
-
-// ══════════════════════════════════════
-// MOD / MOI
-// ══════════════════════════════════════
-function refreshModMoi(){
-  const fp=filteredProj('modmoi');
-  const tMOD=fp.reduce((a,p)=>a+p.costo_MOD,0),tMOI=fp.reduce((a,p)=>a+p.costo_MOI,0);
-  const sMOD=fp.reduce((a,p)=>a+p.sueldo_mod,0),pMOD=fp.reduce((a,p)=>a+p.pers_mod,0);
-  const sMOI=fp.reduce((a,p)=>a+p.sueldo_moi,0),pMOI=fp.reduce((a,p)=>a+p.pers_moi,0);
-
-  // Use empresa totals for MOD/MOI
-  const tMODE=fp.reduce((a,p)=>a+(p.costo_MOD>0?p.costo_MOD*(1+(p.factor_prestacional||0)):0),0);
-  const tMOIE=fp.reduce((a,p)=>a+(p.costo_MOI>0?p.costo_MOI*(1+(p.factor_prestacional||0)):0),0);
-  const totEmp=tMODE+tMOIE||1;
-  // Sal prom empresa = sueldo basico * factor / personas
-  const salModEmp = pMOD>0 ? sMOD*(1+(G.pct_seg_social+G.pct_parafiscal+G.pct_prestaciones)/100)/pMOD : 0;
-  const salMoiEmp = pMOI>0 ? sMOI*(1+(G.pct_seg_social+G.pct_parafiscal+G.pct_prestaciones)/100)/pMOI : 0;
-  document.getElementById('kpi-modmoi').innerHTML=[
-    {l:'COSTO MOD (c/prest.)',v:fmtM(tMODE),s:fmtP(tMODE/totEmp)+' del total empresa',c:'#1a56db'},
-    {l:'PERSONAS MOD',v:fmtN(pMOD),s:'Sobre sueldo básico',c:'#1a56db'},
-    {l:'SAL. PROM. MOD (c/prest.)',v:pMOD>0?fmtM(salModEmp):'—',s:'Sueldo básico incl. SS+prest.',c:'#1a56db'},
-    {l:'COSTO MOI (c/prest.)',v:fmtM(tMOIE),s:fmtP(tMOIE/totEmp)+' del total empresa',c:'#0891b2'},
-    {l:'PERSONAS MOI',v:fmtN(pMOI),s:'Sobre sueldo básico',c:'#0891b2'},
-    {l:'SAL. PROM. MOI (c/prest.)',v:pMOI>0?fmtM(salMoiEmp):'—',s:'Sueldo básico incl. SS+prest.',c:'#0891b2'},
-  ].map(k=>`<div class="kpi-card" style="--kc:${k.c}"><div class="kpi-label">${k.l}</div><div class="kpi-value">${k.v}</div><div class="kpi-sub">${k.s}</div></div>`).join('');
-
-  destroyChart('ch-mod-donut');
-  mkChart('ch-mod-donut',{type:'doughnut',data:{
-    labels:['M.O. Directa (c/prest.)','M.O. Indirecta (c/prest.)'],
-    datasets:[{data:[tMODE,tMOIE],backgroundColor:['#1a56db','#0891b2'],borderWidth:3,borderColor:'#fff',hoverOffset:7}]
-  },options:{cutout:'58%',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:10},padding:8}},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${fmtM(ctx.raw)} (${(ctx.raw/totEmp*100).toFixed(1)}%)`}}}}});
-
-  const top12=fp.slice(0,12);
-  destroyChart('ch-mod-stacked');
-  mkChart('ch-mod-stacked',{type:'bar',data:{
-    labels:top12.map(p=>p.Proyecto.length>24?p.Proyecto.substring(0,24)+'…':p.Proyecto),
-    datasets:[{label:'MOD',data:top12.map(p=>p.costo_MOD/1e6),backgroundColor:'#1a56db',borderRadius:2},{label:'MOI',data:top12.map(p=>p.costo_MOI/1e6),backgroundColor:'#0891b2',borderRadius:2}]
-  },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'},tooltip:{mode:'index',callbacks:{label:ctx=>`${ctx.dataset.label}: $${ctx.raw.toFixed(1)} M`}}},scales:{x:{stacked:true,ticks:{callback:v=>`$${v} M`},grid:{color:'rgba(0,0,0,.05)'}},y:{stacked:true,grid:{display:false},ticks:{font:{size:10}}}}}});
-
-  let html='';
-  fp.forEach(p=>{
-    const modE=p.costo_MOD*(1+(p.factor_prestacional||0)),moiE=p.costo_MOI*(1+(p.factor_prestacional||0));
-    const tot=Math.max(modE+moiE,1),isA=ADMIN.includes(p.Proyecto);
-    const fp_ss=(G.pct_seg_social+G.pct_parafiscal+G.pct_prestaciones)/100;
-    const salModE=p.pers_mod>0?p.sueldo_mod*(1+fp_ss)/p.pers_mod:0;
-    const salMoiE=p.pers_moi>0?p.sueldo_moi*(1+fp_ss)/p.pers_moi:0;
-    html+=`<tr class="${isA?'admin-row':''}">
-      <td class="bold">${p.Proyecto}</td><td class="num">${fmtN(p.empleados)}</td>
-      <td class="num" style="color:#7c3aed">${fmtM(modE)}</td><td class="num">${fmtN(p.pers_mod)}</td>
-      <td class="num bold">${salModE>0?fmtM(salModE):'—'}</td>
-      <td class="num">${(modE/tot*100).toFixed(0)}%</td>
-      <td class="num" style="color:#7c3aed">${fmtM(moiE)}</td><td class="num">${fmtN(p.pers_moi)}</td>
-      <td class="num bold">${salMoiE>0?fmtM(salMoiE):'—'}</td>
-      <td class="num">${(moiE/tot*100).toFixed(0)}%</td>
-    </tr>`;
-  });
-  document.getElementById('tbody-modmoi').innerHTML=html;
-}
-
-// ══════════════════════════════════════
-// HORAS EXTRAS
-// ══════════════════════════════════════
-function refreshExtras(){
-  const fp=filteredProj('extras');
-  const extP=fp.filter(p=>p['Horas Extras']>0).sort((a,b)=>b['Horas Extras']-a['Horas Extras']);
-  const top10=extP.slice(0,10);
-  const totExt=extP.reduce((a,p)=>a+p['Horas Extras'],0);
-  const totNom=fp.reduce((a,p)=>a+p.costo_total,0);
-  const projMax=extP[0]||{Proyecto:'—','Horas Extras':0,costo_total:1};
-  const pctMax=extP.length?extP.reduce((a,p)=>(p['Horas Extras']/p.costo_total>a['Horas Extras']/a.costo_total)?p:a):projMax;
-
-  document.getElementById('kpi-extras').innerHTML=[
-    {l:'TOTAL H. EXTRAS + RECARGOS',v:fmtM(totExt),s:fmtP(totNom>0?totExt/totNom:0)+' del costo nómina',c:'#dc2626'},
-    {l:'PROYECTOS CON H. EXTRAS',v:extP.length,s:'de los proyectos filtrados',c:'#d97706'},
-  ].map(k=>`<div class="kpi-card" style="--kc:${k.c}"><div class="kpi-label">${k.l}</div><div class="kpi-value">${k.v}</div><div class="kpi-sub">${k.s}</div></div>`).join('');
-
-  destroyChart('ch-ext-bar');
-  mkChart('ch-ext-bar',{type:'bar',data:{
-    labels:top10.map(p=>p.Proyecto.length>30?p.Proyecto.substring(0,30)+'…':p.Proyecto),
-    datasets:[{data:top10.map(p=>p['Horas Extras']/1e6),backgroundColor:top10.map(p=>{const pct=p['Horas Extras']/p.costo_total;return pct>0.28?'#dc2626':pct>0.18?'#d97706':'#ea580c';}),borderRadius:4}]
-  },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`$${ctx.raw.toFixed(1)} M`}}},scales:{x:{ticks:{callback:v=>`$${v} M`},grid:{color:'rgba(0,0,0,.05)'}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});
-
-  // Pie tipos - always global
-  const tipos={},nm={'HORA EXTRA DIURNA ORDINARIA 1.25%':'H.E. Diurna 1.25%','DOMINICAL O FESTIVO AL 180% LEY 2466':'Dom./Festivo 180%','HORA RECARGO NOCTURNO DOMINICAL O FESTIVO 2.10%':'Rec.Noct.Dom 2.10%','DOMINICAL AL 80% LEY 2466':'Dominical 80%','HORA RECARGO NOCTURNO NORMAL 0.35%':'Rec.Noct. Normal','HORA EXTRA NOCTURNA ORDINARIA 1.75%':'H.E. Noct. 1.75%','HORA EXTRA DIURNA DOMINICAL O FESTIVO 2.00%':'H.E. Diurna Dom 2%','HORA EXTRA NOCTURNA DOMINICAL O FESTIVO 2.50%':'H.E. Noct. Dom 2.5%','HORA COMPENSATORIA 100%':'Compensatoria 100%'};
-  CONC.filter(c=>c.categoria==='Horas Extras'&&c.Vlr_Nomina>0).forEach(c=>{const k=nm[c.concept_descrip]||c.concept_descrip;tipos[k]=(tipos[k]||0)+c.Vlr_Nomina;});
-  const extL=Object.keys(tipos),extV=Object.values(tipos),extC=['#dc2626','#ea580c','#f97316','#fbbf24','#a3e635','#34d399','#22d3ee','#818cf8','#e879f9'];
-  destroyChart('ch-ext-tipo');
-  mkChart('ch-ext-tipo',{type:'doughnut',data:{labels:extL,datasets:[{data:extV.map(v=>v/1e6),backgroundColor:extC.slice(0,extL.length),borderWidth:3,borderColor:'#fff',hoverOffset:7}]},options:{cutout:'50%',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{padding:8,font:{size:10}}},tooltip:{callbacks:{label:ctx=>`${ctx.label}: $${ctx.raw.toFixed(1)} M`}}}}});
-
-  let html='';
-  extP.forEach(p=>{const pct=p['Horas Extras']/p.costo_total;html+=`<tr><td class="bold">${p.Proyecto}</td><td class="num">${fmtN(p.empleados)}</td><td class="num">${fmtM(p.costo_total)}</td><td class="num" style="color:#7c3aed">${fmtM(p.costo_total_empresa||p.costo_total)}</td><td class="num bold">${fmtM(p['Horas Extras'])}</td><td class="num ${semCls(pct)}">${(pct*100).toFixed(1)}%</td></tr>`;});
-  const totEmp2=extP.reduce((a,p)=>a+(p.costo_total_empresa||p.costo_total),0);
-  html+=`<tr class="total-row"><td class="bold">TOTAL</td><td class="num bold">${fmtN(extP.reduce((a,p)=>a+p.empleados,0))}</td><td class="num bold">${fmtM(extP.reduce((a,p)=>a+p.costo_total,0))}</td><td class="num bold" style="color:#7c3aed">${fmtM(totEmp2)}</td><td class="num bold">${fmtM(totExt)}</td><td class="num bold">${totNom>0?(totExt/totNom*100).toFixed(1)+'%':'—'}</td></tr>`;
-  document.getElementById('tbody-extras').innerHTML=html;
-}
-
-// ══════════════════════════════════════
-// COMPOSICION
-// ══════════════════════════════════════
-function refreshComp(){
-  const fp=filteredProj('comp');
-  const totCosto=fp.reduce((a,p)=>a+p.costo_total,0);
-  const catTotals=CATS.map(c=>fp.reduce((a,p)=>a+(p[c]||0),0));
-  // Calculate prestacional from FILTERED projects
-  const filteredCargos=fp.reduce((a,p)=>a+(p.cargos_prestacionales||0),0);
-  const pctSS=G.pct_seg_social+G.pct_parafiscal;
-  const pctPR=G.pct_prestaciones;
-  destroyChart('ch-cat-pie');
-  // Include prestaciones in pie for empresa view (from filtered data)
-  const ssVal=filteredCargos*pctSS/(pctSS+pctPR);
-  const prVal=filteredCargos*pctPR/(pctSS+pctPR);
-  const allCats=[...CATS,'Seg.Social+Paraf.','Prestaciones Sociales'];
-  const allVals=[...catTotals, ssVal, prVal];
-  const allCols=[...CAT_COLS,'#7c3aed','#9333ea'];
-  const totEmpresa=allVals.reduce((a,v)=>a+v,0);
-  mkChart('ch-cat-pie',{type:'doughnut',data:{
-    labels:allCats,
-    datasets:[{data:allVals,backgroundColor:allCols,borderWidth:3,borderColor:'#fff',hoverOffset:7}]
-  },options:{cutout:'55%',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{padding:8,font:{size:10}}},tooltip:{callbacks:{label:ctx=>` ${ctx.label}: ${fmtM(ctx.raw)} (${(ctx.raw/totEmpresa*100).toFixed(1)}%)`}}}}});
-
-  const maxCat=Math.max(...catTotals);
-  const summaryItems=[
-    ...CATS.map((c,i)=>({l:c,v:catTotals[i],col:CAT_COLS[i]})),
-    {l:'Seg.Social+Paraf.',v:ssVal,col:'#7c3aed'},
-    {l:'Prestaciones Soc.',v:prVal,col:'#9333ea'},
-  ];
-  const maxCatAll=Math.max(...summaryItems.map(x=>x.v));
-  document.getElementById('cat-summary').innerHTML=summaryItems.map(item=>`
-    <div class="bar-row" style="margin-bottom:7px">
-      <div class="bar-label" style="font-weight:600;color:var(--navy);width:145px;font-size:11px">${item.l}</div>
-      <div class="bar-track" style="height:8px"><div class="bar-fill" style="width:${maxCatAll>0?item.v/maxCatAll*100:0}%;background:${item.col}"></div></div>
-      <div class="bar-val" style="font-size:11px">${fmtM(item.v)}</div>
     </div>
-    <div style="font-size:10px;color:var(--muted);margin:-4px 0 5px 145px">${totEmpresa>0?(item.v/totEmpresa*100).toFixed(1):'0.0'}% del costo empresa</div>`).join('');
+    <div class="about-img img-editable reveal">
+      <!--
+        =====================================================
+        INSTRUCCIÓN PARA AGREGAR IMAGEN:
+        Reemplaza este bloque con:
+        <img src="ruta/a/tu-imagen.jpg" alt="Equipo Metricom">
+        
+        Imágenes recomendadas:
+        - Foto del equipo de Metricom trabajando
+        - Foto del laboratorio de calibración
+        - Foto de un técnico usando un OTDR en campo
+        =====================================================
+      -->
+      <img src="https://metricom.com.co/wp-content/uploads/2026/04/Quienes-somos.jpeg" alt="Equipo Metricom">
+</section>
 
-  // Concept grid
-  const isFiltered=filterState['comp'].size>0;
-  if(!isFiltered){
-    const groups={};
-    CONC.forEach(c=>{if(!groups[c.categoria])groups[c.categoria]=[];groups[c.categoria].push(c);});
-    // Add prestaciones as two extra cards
-    const ssCard=`<div class="concept-group"><div class="concept-header" style="background:#7c3aed">Seg. Social + Parafiscales (est.) — ${fmtM(ssVal)}</div><div class="concept-row"><span class="concept-name">Salud patronal 8.5% + Pensión 12% + ARL 2%</span><span class="concept-val">${fmtM(ssVal*G.pct_seg_social/(G.pct_seg_social+G.pct_parafiscal))}</span><span class="concept-pct">${(G.pct_seg_social/(G.pct_seg_social+G.pct_parafiscal)*100).toFixed(0)}%</span></div><div class="concept-row"><span class="concept-name">SENA 2% + ICBF 3% + Caja 4%</span><span class="concept-val">${fmtM(ssVal*G.pct_parafiscal/(G.pct_seg_social+G.pct_parafiscal))}</span><span class="concept-pct">${(G.pct_parafiscal/(G.pct_seg_social+G.pct_parafiscal)*100).toFixed(0)}%</span></div></div>`;
-    const prCard=`<div class="concept-group"><div class="concept-header" style="background:#9333ea">Prestaciones Sociales (est.) — ${fmtM(prVal)}</div><div class="concept-row"><span class="concept-name">Cesantías 8.33%</span><span class="concept-val">${fmtM(prVal*0.0833/0.2183)}</span><span class="concept-pct">38.2%</span></div><div class="concept-row"><span class="concept-name">Prima de servicios 8.33%</span><span class="concept-val">${fmtM(prVal*0.0833/0.2183)}</span><span class="concept-pct">38.2%</span></div><div class="concept-row"><span class="concept-name">Vacaciones 4.17% + Intereses cesantías 1%</span><span class="concept-val">${fmtM(prVal*0.0517/0.2183)}</span><span class="concept-pct">23.6%</span></div></div>`;
-    document.getElementById('concept-grid').innerHTML=Object.entries(groups).map(([cat,items])=>{
-      const ct=items.reduce((a,i)=>a+i.Vlr_Nomina,0);
-      return `<div class="concept-group"><div class="concept-header" style="background:${CAT_MAP[cat]||'#0d1f3c'}">${cat} — ${fmtM(ct)}</div>${items.filter(i=>i.Vlr_Nomina>0).map(i=>`<div class="concept-row"><span class="concept-name">${i.concept_descrip}</span><span class="concept-val">${fmtM(i.Vlr_Nomina)}</span><span class="concept-pct">${(i.Vlr_Nomina/ct*100).toFixed(1)}%</span></div>`).join('')}</div>`;
-    }).join('')+ssCard+prCard;
-  } else {
-    // Show per-project category breakdown including prestaciones
-    const totEmp=totCosto+filteredCargos;
-    document.getElementById('concept-grid').innerHTML=`<div class="concept-group" style="grid-column:1/-1">
-      <div class="concept-header" style="background:var(--navy)">${fp.length===1?fp[0].Proyecto:'Selección ('+fp.length+' proyectos)'} — ${fmtM(totEmp)} (costo empresa est.)</div>
-      ${CATS.filter(c=>fp.reduce((a,p)=>a+(p[c]||0),0)>0).map(c=>{const v=fp.reduce((a,p)=>a+(p[c]||0),0);return `<div class="concept-row"><span class="concept-name" style="font-weight:600">${c}</span><span class="concept-val">${fmtM(v)}</span><span class="concept-pct">${(v/totEmp*100).toFixed(1)}%</span></div>`;}).join('')}
-      ${ssVal>0?`<div class="concept-row" style="background:rgba(124,58,237,.06)"><span class="concept-name" style="font-weight:600;color:#7c3aed">Seg. Social + Parafiscales (est.)</span><span class="concept-val" style="color:#7c3aed">${fmtM(ssVal)}</span><span class="concept-pct" style="color:#7c3aed">${(ssVal/totEmp*100).toFixed(1)}%</span></div>`:''}
-      ${prVal>0?`<div class="concept-row" style="background:rgba(147,51,234,.06)"><span class="concept-name" style="font-weight:600;color:#9333ea">Prestaciones Sociales (est.)</span><span class="concept-val" style="color:#9333ea">${fmtM(prVal)}</span><span class="concept-pct" style="color:#9333ea">${(prVal/totEmp*100).toFixed(1)}%</span></div>`:''}
-      <div class="concept-row" style="background:#eef2ff"><span class="concept-name bold">TOTAL EMPRESA (est.)</span><span class="concept-val" style="color:#7c3aed;font-weight:700">${fmtM(totEmp)}</span><span class="concept-pct bold">100%</span></div>
-    </div>`;
-  }
+<!-- BUSINESS LINES -->
+<section class="sec sec-white" id="lines">
+  <div style="max-width:1320px;margin:0 auto">
+    <div class="sec-lbl reveal">Líneas de Negocio</div>
+    <h2 class="sec-title reveal">Soluciones integrales para cada etapa</h2>
+    <p class="sec-sub reveal">Cuatro pilares diseñados para cubrir el ciclo completo de su infraestructura tecnológica.</p>
+    <div class="lines-grid">
+      <div class="line-card reveal">
+        <div class="line-img img-editable">
+          <!--
+            IMAGEN: Foto de equipos en mesa de laboratorio / showroom
+            Usar: foto propia de Metricom o stock de equipos de telecom
+          -->
+          <img src="https://metricom.com.co/wp-content/uploads/2026/04/Ventas.png" alt="Venta de equipos">
+        </div>
+        <div class="line-body"><h3>Venta</h3><p>Equipos de prueba y medida de fabricantes reconocidos mundialmente, con garantía y soporte local.</p></div>
+      </div>
+      <div class="line-card reveal">
+        <div class="line-img img-editable">
+          <img src="https://metricom.com.co/wp-content/uploads/2026/04/Alquiler.jpeg" alt="Alquiler de equipos">
+        </div>
+        <div class="line-body"><h3>Alquiler</h3><p>Equipos disponibles para proyectos temporales o evaluación, con soporte técnico incluido.</p></div>
+      </div>
+      <div class="line-card reveal">
+        <div class="line-img img-editable">
+          <img src="https://metricom.com.co/servicio_tecnico/" alt="Servicio técnico">
+        </div>
+        <div class="line-body"><h3>Servicio Técnico</h3><p>Calibración, reparación y mantenimiento con estándares internacionales de calidad.</p></div>
+      </div>
+      <div class="line-card reveal">
+        <div class="line-img img-editable">
+          <img src="https://metricom.com.co/wp-content/uploads/2026/04/Capacitaciones-scaled.jpeg" alt="Capacitación">
+        </div>
+        <div class="line-body"><h3>Capacitación</h3><p>Formación técnica especializada con profesionales de amplia trayectoria en el sector.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section class="sec-dark" id="tech">
+  <div style="max-width:1320px;margin:0 auto">
+    <div class="sec-lbl">Tecnologías</div>
+    <h2 class="sec-title">Ecosistema completo de soluciones</h2>
+    <p class="sec-sub">Ocho verticales tecnológicas con equipos de primer nivel mundial.</p>
+    <div class="tech-tabs">
+      <button class="tech-tab active" data-tab="fiber">Fibra Óptica</button>
+      <button class="tech-tab" data-tab="fttx">FTTx</button>
+      <button class="tech-tab" data-tab="transport">Transporte</button>
+      <button class="tech-tab" data-tab="rf">RF y Metrología</button>
+      <button class="tech-tab" data-tab="monitor">Monitoreo</button>
+      <button class="tech-tab" data-tab="energy">Energía</button>
+      <button class="tech-tab" data-tab="hfc">HFC</button>
+      <button class="tech-tab" data-tab="security">Seguridad</button>
+    </div>
+
+    <!-- FIBER -->
+    <div class="tech-panel active" id="tab-fiber">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Fibra Óptica</h3>
+          <p>Impulse el rendimiento y la confiabilidad de su red con soluciones avanzadas para certificación, diagnóstico y mantenimiento de fibra óptica.
+Desde pruebas con OTDR hasta empalmes de alta precisión, garantizamos mediciones exactas, menor pérdida óptica y máxima continuidad operativa en cada enlace.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Optimización de tiempos en campo</h4><p>Reduzca significativamente los tiempos de diagnóstico y certificación mediante pruebas automatizadas y análisis inteligente, acelerando la entrega de proyectos y mantenimientos.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Precisión y confiabilidad en cada medición</h4><p>Equipos diseñados para garantizar resultados exactos en cada prueba, minimizando errores y asegurando la calidad de la red desde la instalación hasta la operación.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Visibilidad y control en tiempo real</h4><p>Acceda a resultados, reportes y estado de la red en tiempo real gracias a conectividad cloud, facilitando la toma de decisiones y la gestión remota de operaciones.</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod">
+            <div class="tech-prod-img img-editable">
+              <!-- IMAGEN: VeEX FX150+ OTDR — descargar de https://www.veexinc.com -->
+              <img src="https://www.veexinc.com/assets/images/Products/1024-FX150plus_01.png" alt="OTDR VeEX">
+            </div>
+            <div class="tech-prod-body"><h4>OTDR</h4><p>Diagnóstico avanzado de fibra óptica con mapeo automático V-Scout, que simplifica la interpretación de eventos sin necesidad de analizar trazas complejas.
+Permite realizar pruebas multi-fibra y sincronizar resultados en la nube para una gestión eficiente en tiempo real.</p></div>
+          </div>
+          <div class="tech-prod">
+            <div class="tech-prod-img img-editable">
+              <!-- IMAGEN: Empalmadora de fusión — descargar de fabricante -->
+              <img src="https://lightera.com/wp-content/uploads/2026/02/1008700-0.jpg" alt="Empalmadora">
+            </div>
+            <div class="tech-prod-body"><h4>Empalmadoras</h4><p>Empalmes de alta precisión mediante alineación por núcleo, garantizando mínima pérdida y máxima calidad en cada conexión.
+Equipos rápidos, robustos y diseñados para trabajo en campo, incluso en condiciones exigentes.</p></div>
+          </div>
+          <div class="tech-prod">
+            <div class="tech-prod-img img-editable">
+              <!-- IMAGEN: Verificador canales ópticos -->
+              <img src="https://www.veexinc.com/assets/images/Products/1024-PX90_01.png" alt="Verificador">
+            </div>
+            <div class="tech-prod-body"><h4>Verificador Canales Ópticos</h4><p>Medición multi-longitud de onda para análisis rápido y confiable de múltiples canales DWDM.
+Cuenta con interfaz táctil intuitiva y almacenamiento de resultados para facilitar la validación y generación de reportes.</p></div>
+          </div>
+          <div class="tech-prod">
+            <div class="tech-prod-img img-editable">
+              <!-- IMAGEN: Microscopio óptico de inspección -->
+              <img src="https://www.veexinc.com/assets/images/Products/1024-DI-3000_03.png" alt="Microscopio">
+            </div>
+            <div class="tech-prod-body"><h4>Microscopio Óptico</h4><p>Inspección detallada de conectores con alto nivel de aumento, permitiendo detectar suciedad o imperfecciones críticas.
+Incluye enfoque automático y visualización en pantalla o dispositivos externos para mayor agilidad en campo.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FTTx -->
+    <div class="tech-panel" id="tab-fttx">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>FTTx</h3>
+          <p>Optimice el despliegue y operación de redes de última milla con herramientas diseñadas para instalación, certificación y diagnóstico en entornos GPON/XGS-PON.
+Asegure activaciones correctas desde el primer intento, valide la calidad del servicio y reduzca tiempos de atención en campo.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Activación eficiente desde el primer intento</h4><p>Valide potencia, conectividad y calidad del servicio directamente en el abonado, reduciendo reprocesos y garantizando instalaciones exitosas.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Diagnóstico preciso en redes PON</h4><p>Identifique fallas, dispositivos no autorizados y problemas de servicio mediante análisis profundo de la red, optimizando tiempos de mantenimiento.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Gestión y control en despliegues masivos</h4><p>Centralice resultados y operaciones en múltiples frentes de trabajo, facilitando auditorías, seguimiento y toma de decisiones en tiempo real.</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-PX90_01.png" alt="PX90"></div><div class="tech-prod-body"><h4>PX90 PON Meter</h4><p>Validación rápida de servicios en campo con medición de potencia selectiva y conectividad WiFi integrada.
+Incluye pruebas de velocidad para asegurar la experiencia real del usuario final durante la instalación.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-FX120L_01.png" alt="FX120"></div><div class="tech-prod-body"><h4>FX120 Analyzer</h4><p>Análisis avanzado de redes GPON/XGS-PON, permitiendo identificar ONTs no autorizadas y evaluar el estado del servicio en tiempo real.
+Ideal para diagnóstico profundo y resolución de fallas complejas.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-PX92_03.png" alt="PX92"></div><div class="tech-prod-body"><h4>PX92/PX92T</h4><p>Herramienta versátil para análisis de servicios hasta 10G con modo pass-through entre OLT y ONT.
+Permite monitorear el tráfico y detectar problemas de autenticación o pérdida de paquetes.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://cn.veexinc.com/assets/images/Products/1024-OTT_01.png" alt="OTT"></div><div class="tech-prod-body"><h4>OTT Optical Tool</h4><p>Solución para pruebas masivas y auditoría de red con conmutación óptica y geoetiquetado GNSS.
+Facilita la validación de múltiples fibras y la gestión centralizada de resultados en campo.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSPORT -->
+    <div class="tech-panel" id="tab-transport">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Transporte y Protocolos</h3>
+          <p>Asegure el rendimiento y la capacidad de su red con soluciones de prueba multigigabit diseñadas para entornos de alta exigencia.
+Desde validación Ethernet hasta análisis de protocolos complejos, nuestros equipos garantizan cumplimiento de estándares y máxima eficiencia en redes Core, Metro y Datacenter.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Alto rendimiento en redes Core y Datacenter</h4><p>Valide enlaces de alta capacidad y transceivers avanzados, asegurando cumplimiento de estándares y desempeño óptimo en infraestructuras críticas.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Interoperabilidad en redes Metro y agregación</h4><p>Pruebe múltiples tecnologías en una sola plataforma, facilitando la transición entre redes tradicionales y arquitecturas modernas.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Herramientas eficientes para campo y acceso</h4><p>Equipos compactos y versátiles que permiten realizar pruebas rápidas en despliegues, mantenimiento y redes móviles.</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-MTX640_01.png" alt="RXT-1200"></div><div class="tech-prod-body"><h4>RXT-1200 + 800G</h4><p>Plataforma de pruebas de alta capacidad desde 1GE hasta 800GE, ideal para validación de transceivers, cables y cumplimiento de estándares en redes Core y Datacenter.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://dl.cdn-anritsu.com/images/products/tm-mt1040a/mt1040a-xl-1port-e.png?h=310&w=420&la=en-US" alt="MT1040A"></div><div class="tech-prod-body"><h4>MT1040A / MT1000A</h4><p>Equipos portátiles de alto rendimiento para pruebas de hasta 400GE, diseñados para entornos exigentes de campo y validación en redes de transporte.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-TX300s_01.png" alt="TX300S"></div><div class="tech-prod-body"><h4>TX300S Family</h4><p>Solución “todo en uno” para pruebas multi-servicio que integra tecnologías OTN, SDH, SONET y Ethernet en una sola plataforma, facilitando la transición de redes.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Products/1024-MTX150x_01.png" alt="MTX150X"></div><div class="tech-prod-body"><h4>MTX150X</h4><p>Equipo compacto para técnicos de campo con capacidades de hasta 10G, ideal para validación rápida de servicios Ethernet y pruebas de instalación.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RF -->
+    <div class="tech-panel" id="tab-rf">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>RF, Metrología y Optimización</h3>
+          <p>Controle, analice y optimice el espectro con soluciones de alta precisión diseñadas para entornos críticos.
+Desde monitoreo 5G hasta metrología de frecuencia y potencia, garantizamos mediciones confiables, cumplimiento normativo y máxima eficiencia en redes inalámbricas.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Análisis de Espectro y Vigilancia de Señal</h4><p>Monitoree el espectro en tiempo real, identifique interferencias y garantice la calidad del servicio en redes 4G/5G y entornos críticos.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4> Optimización y mantenimiento de infraestructura</h4><p>Detecte fallas en antenas, cables y sitios mediante pruebas avanzadas, asegurando operación eficiente y reducción de tiempos de intervención.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Precisión en tiempo, frecuencia y potencia</h4><p>Realice mediciones con exactitud de nivel laboratorio, fundamentales para calibración, sincronización y validación de redes.</p></div></div>
+	    <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Comunicaciones críticas y radio móvil (LMR)</h4><p>Asegure el desempeño de redes de misión crítica como P25 y TETRA, optimizando cobertura, modulación y confiabilidad operativa.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Seguridad electromagnética y cumplimiento</h4><p>Evalúe niveles de radiación y exposición según normativa, garantizando entornos seguros y cumplimiento regulatorio.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Caracterización y optimización de red</h4><p>Analice componentes, cobertura y desempeño para mejorar la eficiencia global de la red y soportar nuevas tecnologías inalámbricas.</p></div></div>
+
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://dl.cdn-anritsu.com/images/products/ms2090a/ms2090a-hero-new.png?h=310&w=420&la=en-US" alt="MS2090A"></div><div class="tech-prod-body"><h4>Field Master Pro</h4><p>Analizador de espectro portátil de alto rendimiento para monitoreo y análisis hasta 5G.
+Ideal para detección de interferencias, medición de señales y vigilancia continua del espectro.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://dl.cdn-anritsu.com/images/products/tm-s331l/site-master-s331l.png?h=310&w=420&la=en-US" alt="S331L"></div><div class="tech-prod-body"><h4>Site Master S331L</h4><p>Herramienta clave para instalación y mantenimiento de sitios, con mediciones VSWR, DTF y análisis de cables y antenas.
+Permite identificar fallas físicas que impactan el rendimiento de la red.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://pendulum-instruments.com/wp-content/uploads/2024/04/CNT-90-1396x821_1.png" alt="CNT-90"></div><div class="tech-prod-body"><h4>Pendulum CNT-90</h4><p>Contador de frecuencia de alta precisión con referencia GNSS/rubidio, diseñado para aplicaciones de metrología y sincronización de redes.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://dl.cdn-anritsu.com/images/products/tm-s412e/site-master-s412e-front.png?h=310&w=420&la=en-US" alt="S412E"></div><div class="tech-prod-body"><h4>LMR Master S412E</h4><p>Solución especializada para mantenimiento de radios P25/TETRA, permitiendo pruebas de modulación, alineación y diagnóstico de equipos de misión crítica.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONITOR -->
+    <div class="tech-panel" id="tab-monitor">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Sistemas de Monitoreo</h3>
+          <p>Obtenga visibilidad total y en tiempo real de su infraestructura física y lógica.
+Nuestras soluciones permiten detectar fallas en segundos, anticipar incidentes y reducir drásticamente los tiempos de respuesta (MTTR), garantizando continuidad operativa y cumplimiento de SLAs.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Aseguramiento de servicio 5G y nube</h4><p>Monitoreo end-to-end desde el acceso (RAN) hasta el núcleo (Core), con analítica avanzada que permite anticipar fallas y garantizar la calidad del servicio.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Monitoreo de infraestructura de fibra (RFTS)</h4><p>Detección automática de cortes y degradaciones en la red, con geolocalización precisa que permite actuar en minutos y reducir tiempos de reparación.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Visibilidad total del tráfico de red</h4><p>Acceso a copias exactas del tráfico sin afectar la operación, facilitando análisis profundo, ciberseguridad y diagnóstico de red.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Interconectividad y evolución de voz</h4><p>Integración entre redes tradicionales y modernas mediante gateways VoIP, asegurando continuidad en servicios de comunicación.</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Radcom_logo_2023.png" alt="RADCOM"></div><div class="tech-prod-body"><h4>RADCOM Service Assurance</h4><p>Plataforma avanzada de aseguramiento de servicio para redes 5G y nube.
+Permite monitoreo desde RAN hasta Core, con analítica predictiva que detecta problemas antes de impactar al usuario.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Solution/r-server/VeSion_diagram_FINAL_product_catalog_2026_updated.webp?auto=format" alt="VeSion"></div><div class="tech-prod-body"><h4>VeSion + RTU-4000</h4><p>Sistema centralizado de monitoreo de fibra con unidades remotas (RTU) y matrices ópticas.
+Detecta cortes en segundos, ubica la falla geográficamente y genera alertas inmediatas.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop" alt="TAPs"></div><div class="tech-prod-body"><h4>Network TAPs</h4><p>Dispositivos que capturan copias exactas del tráfico de red sin interrupción.
+Ideales para alimentar herramientas de seguridad, monitoreo y análisis de protocolos.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=300&h=200&fit=crop" alt="Tmedia"></div><div class="tech-prod-body"><h4>TelcoBridges Tmedia</h4><p>Gateway de interconexión que permite integrar redes TDM/SS7 con entornos IP/VoIP.
+Facilita la transición tecnológica sin afectar la operación existente.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENERGY -->
+    <div class="tech-panel" id="tab-energy">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Energía</h3>
+          <p>Garantice la continuidad y eficiencia de su operación con soluciones avanzadas de diagnóstico y mantenimiento energético.
+Desde calidad de potencia hasta análisis de baterías y termografía, ayudamos a prevenir fallas, proteger activos críticos y optimizar el consumo energético.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Diagnóstico y calidad de energía</h4><p>Identifique fallas eléctricas, armónicos y variaciones que afectan el rendimiento de sus equipos, asegurando un suministro estable y confiable.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Respaldo y continuidad operativa</h4><p>Evalúe el estado de bancos de baterías y sistemas UPS para prevenir caídas de servicio y garantizar la disponibilidad de su infraestructura.</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Seguridad e instalación profesional</h4><p>Herramientas certificadas para trabajo en líneas energizadas, reduciendo riesgos y asegurando instalaciones seguras y eficientes.</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://media.fluke.com/661773bd-2753-4beb-928b-b108002f341b__0px12_col2x.jpg" alt="Fluke"></div><div class="tech-prod-body"><h4>Analizadores Fluke</h4><p>Equipos especializados en calidad de energía y medición eléctrica que permiten detectar ineficiencias, fallas y pérdidas en sistemas eléctricos.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://media.fluke.com/dcbdfb96-25c7-42fa-bd9f-b108002f4828__0px12_col2x.jpg" alt="Térmicas"></div><div class="tech-prod-body"><h4>Cámaras Térmicas</h4><p>Soluciones de termografía para mantenimiento predictivo, ideales para identificar puntos calientes y prevenir fallas antes de que ocurran.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop" alt="WENS"></div><div class="tech-prod-body"><h4>WENS 900</h4><p>Sistema avanzado para análisis de baterías en entornos críticos, permitiendo evaluar su estado y prevenir fallas en sistemas de respaldo.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=300&h=200&fit=crop" alt="Jonard"></div><div class="tech-prod-body"><h4>Kits Jonard</h4><p>Herramientas profesionales de alta durabilidad para instalación y mantenimiento, diseñadas para trabajo seguro y eficiente en campo.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HFC -->
+    <div class="tech-panel" id="tab-hfc">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Ecosistema HFC</h3>
+          <p>Asegure la excelencia en redes híbridas de fibra y coaxial. Soluciones integrales para cabecera y campo que soportan DOCSIS 3.1/4.0, garantizando un camino de retorno limpio y una experiencia de usuario de alta calidad.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Medición y Análisis en Cabecera (Headend & Hub)</h4><p>Supervisión DOCSIS 3.1/4.0 y análisis video MPEG</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Mantenimiento de Planta y Certificación de Campo</h4><p>Sweep en tiempo real y pruebas de última milla</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Monitoreo Proactivo y Gestión Unificada (VeSion®)</h4><p>Gestión unificada con mantenimiento proactivo PNM</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1581092160607-ee67df30b1ce?w=300&h=200&fit=crop" alt="Medición y Análisis en Cabecera (Headend & Hub)"></div><div class="tech-prod-body"><h4>Medición y Análisis en Cabecera (Headend & Hub)</h4><p>Equipos clave: AT2500-3G (Analizador de espectro avanzado), CX280X (Sonda de monitoreo RF), AT1700/1600 (Multiplexores de RF).Valor para el cliente: Permite una supervisión exhaustiva de portadoras digitales DOCSIS 3.1/4.0, análisis de video MPEG y conmutación de señales para asegurar la máxima calidad en el núcleo de la red de transporte.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=200&fit=crop" alt="Mantenimiento de Planta y Certificación de Campo"></div><div class="tech-prod-body"><h4>Mantenimiento de Planta y Certificación de Campo</h4><p>Equipos clave: CX380C (Mantenimiento avanzado de planta), CX310 (Certificador de instalaciones DOCSIS 3.1), SWP-BOX (Transmisor de barrido/Sweep portátil).Valor para el cliente: Facilita la localización de ingresos de ruido en el camino de retorno, realización de barridos (Sweep) en tiempo real para equilibrar amplificadores y pruebas de rendimiento (Speedtest/VeTest) en la última milla.</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://www.veexinc.com/assets/images/Solution/r-server/VeSion_diagram_FINAL_product_catalog_2026_updated.webp?auto=format" alt="VeSion"></div><div class="tech-prod-body"><h4>Monitoreo Proactivo y Gestión Unificada (VeSion®)</h4><p>Solución clave: Sistema VeSion (Cloud-Based Platform). Valor para el cliente: Centraliza los resultados de todas las pruebas de campo, monitorea el ruido en el retorno (Return Path) de forma automática y permite el mantenimiento proactivo (PNM). Elimina las visitas técnicas ciegas al saber exactamente dónde está el problema antes de salir a campo.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="tech-panel" id="tab-security">
+      <div class="tech-grid">
+        <div class="tech-info">
+          <h3>Seguridad Táctica y Espectro</h3>
+          <p>Inteligencia táctica para la protección soberana del espacio aéreo y espectral. Implementamos detección pasiva SIGINT para análisis de señales y sistemas anti-dron con alcances de hasta 80 km para localizar y mitigar amenazas con precisión militar.</p>
+          <div class="tech-feats">
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Inteligencia de Señales (SIGINT) y Vigilancia Pasiva</h4><p>Detección 2G-5G con clasificación por IA</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Defensa Anti-UAV (C-UAS) y Guerra Electrónica</h4><p>Rastreo 3D hasta 80 km, mitigación selectiva</p></div></div>
+            <div class="tech-ft"><div class="tech-ft-dot"></div><div><h4>Gestión de Interferencias y Optimización de Red</h4><p>Triangulación y localización exacta de fuentes</p></div></div>
+          </div>
+        </div>
+        <div class="tech-products">
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://pctel.com/wp-content/uploads/2026/02/BSLE-command-center.jpg" alt="SeeHawk"></div><div class="tech-prod-body"><h4>SeeHawk® Scout</h4><p>Detección pasiva SIGINT</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://img.aeroexpo.online/es/images_ar/photo-m2/187323-20511140.jpg" alt="AARTOS"></div><div class="tech-prod-body"><h4>AARTOS™ X9</h4><p>Anti-dron con rastreo 3D</p></div></div>
+          <div class="tech-prod"><div class="tech-prod-img img-editable"><img src="https://pctel.com/wp-content/uploads/2020/07/banner-SEEWAVE-INTERFERENCE-LOCATING-SYSTEM.png" alt="SeeWave"></div><div class="tech-prod-body"><h4>SeeWave®</h4><p>Localización de interferencias</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="sec" id="brands">
+  <div style="max-width:1320px;margin:0 auto;text-align:center">
+    <div class="sec-lbl reveal">Nuestros Representados</div>
+    <h2 class="sec-title reveal">Fabricantes líderes mundiales</h2>
+    <p class="sec-sub reveal" style="margin-left:auto;margin-right:auto">Alianzas estratégicas con los fabricantes más reconocidos del sector de telecomunicaciones.</p>
+    <div class="brands-grid reveal">
+      <!--
+        =====================================================
+        CÓMO AGREGAR LOGOS DE PROVEEDORES:
+        
+        1. Descarga los logos de cada fabricante en formato PNG 
+           con fondo transparente (busca "brand press kit" o 
+           "media resources" en cada sitio web)
+        2. Reemplaza <span class="brand-text">NOMBRE</span> con:
+           <img src="ruta/al/logo.png" alt="Nombre">
+       
+        =====================================================
+      -->
+      <div class="brand-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Anritsu.svg/1280px-Anritsu.svg.png" alt="ANRITSU"></div>
+      <div class="brand-card"><img src="https://www.veexinc.com/assets/images/header/VeEX_logo_tagline.png" alt="VeEx"></div>
+      <div class="brand-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Radcom_logo_2023.png" alt="RADCOM"></div>
+      <div class="brand-card"><img src="https://companieslogo.com/img/orig/PCTI_BIG-a3c7a03f.png?t=1720244493" alt="PCTEL"></div>
+      <div class="brand-card"><img src="https://siglentna.com/wp-content/uploads/2017/12/New-Siglent-Logo.png" alt="SIGLENT"></div>
+      <div class="brand-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj7Vw9tBMynx6W7O3ACDzdV5AohbnsJfjxxg&s" alt="WAVECONTROL"></div>
+      <div class="brand-card"><img src="https://lightera.com/wp-content/uploads/2025/03/lightera-logo.svg" alt="LIGHTERA"></div>
+      <div class="brand-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC4pE-K8hWEK73sviGzMYLK3VazXPqyOHZRQ&s" alt="CPAT FLEX"></div>
+      <div class="brand-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ixia_logo.svg/1280px-Ixia_logo.svg.png" alt="IXIA"></div>
+      <div class="brand-card"><img src="https://aaronia.de/v6check/img/Aaronia_Logo_Schwarz_DE_300.png" alt="AARONIA"></div>
+      <div class="brand-card"><img src="https://cdn.worldvectorlogo.com/logos/keysight-logo.svg" alt="KEYSIGHT NEMO"></div>
+      <div class="brand-card"><img src="https://images.squarespace-cdn.com/content/v1/612ae5c4583a6c7fcfa3dcbe/1631973825113-6TM67KOIWPCFJ8106OOG/Screen+Shot+2021-09-18+at+20.56.11.png" alt="TRIBRER"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="background:var(--off-white)">
+  <div style="max-width:1320px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="sec-lbl reveal">Contacto</div>
+      <h2 class="sec-title reveal">Conversemos sobre su proyecto</h2>
+    </div>
+    <div class="contact-card reveal">
+
+      <!-- Panel izquierdo: información de contacto -->
+      <div class="contact-left">
+        <h3>Información de Contacto</h3>
+
+        <!-- Dirección -->
+        <div class="c-detail">
+          <div class="c-detail-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div><h4>Dirección</h4><p>Calle 25a No. 32-45<br>Bogotá D.C., Colombia</p></div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="c-detail">
+          <div class="c-detail-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div><h4>Teléfono</h4>
+            <p><a href="tel:+573164703997">+57 316 470 3997</a><br><a href="tel:+576014893919">+57 (601) 489 3919</a></p>
+          </div>
+        </div>
+
+        <!-- Sitio Web -->
+        <div class="c-detail">
+          <div class="c-detail-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div><h4>Sitio Web</h4>
+            <p><a href="https://www.metricom.com.co" target="_blank">www.metricom.com.co</a></p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="c-detail">
+          <div class="c-detail-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </div>
+          <div><h4>Email</h4>
+            <p><a href="mailto:contacto@metricom.com.co">contacto@metricom.com.co</a></p>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="c-detail">
+          <div class="c-detail-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div><h4>LinkedIn</h4>
+            <p><a href="https://www.linkedin.com/company/metricom-colombia" target="_blank">Metricom Colombia</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-right">
+        <h3>Equipo Comercial</h3>
+        <div class="person"><div class="person-av">LG</div><div><h4>Luis Eduardo González</h4><p class="role">Gerente Comercial</p><a href="mailto:comercial@metricom.com.co">comercial@metricom.com.co</a></div></div>
+        <div class="person"><div class="person-av">ZB</div><div><h4>Zorayda Bohorquez</h4><p class="role">Ejecutivo Comercial</p><a href="mailto:comercial2@metricom.com.co">comercial2@metricom.com.co</a></div></div>
+        <div class="contact-qr">
+         <img src="https://metricom.com.co/wp-content/uploads/2026/04/qr-code.png" alt="QR ilustración" class="qr-img" style="width:120px; height:120px;"> 
+         <div class="contact-qr-text">
+           <strong>Escanea y guarda nuestro contacto</strong>
+           Apunta la cámara de tu celular al código QR para tener el contacto de nuestro equipo comercial
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">metricom</div>
+    <p>&copy; 2026 Metricom Ltda. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- QR Code Generator Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+// === NAV ===
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',scrollY>50));
+function toggleNav(){
+  const n=document.getElementById('navLinks');
+  n.style.display=n.style.display==='flex'?'none':'flex';
 }
 
-// ══════════════════════════════════════
-// INIT
-// ══════════════════════════════════════
-document.addEventListener('DOMContentLoaded',()=>{
-  populateSelects();
-  renderResumen();
-  refreshCostos();
-  refreshProd();
-  refreshModMoi();
-  refreshExtras();
-  refreshComp();
+// === TABS ===
+document.querySelectorAll('.tech-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tech-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.tech-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-'+tab.dataset.tab).classList.add('active');
+  });
+});
+
+// === REVEAL ===
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// === SMOOTH SCROLL ===
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+// === SHARE FUNCTIONS ===
+const SHARE_URL='https://metricom.com.co/portafolio';
+const SHARE_TEXT='Portafolio de Servicios 2026 — Metricom: Soluciones de telecomunicaciones en Colombia';
+
+function openShare(){document.getElementById('shareOverlay').classList.add('open');generateShareQR()}
+function closeShare(){document.getElementById('shareOverlay').classList.remove('open')}
+function copyLink(){
+  const inp=document.getElementById('shareUrl');
+  inp.select();navigator.clipboard.writeText(inp.value);
+  const btn=inp.nextElementSibling;btn.textContent='¡Copiado!';
+  setTimeout(()=>btn.textContent='Copiar',2000);
+}
+function shareWhatsApp(){window.open('https://wa.me/?text='+encodeURIComponent(SHARE_TEXT+' '+SHARE_URL),'_blank')}
+function shareEmail(){window.open('mailto:?subject='+encodeURIComponent('Portafolio Metricom 2026')+'&body='+encodeURIComponent(SHARE_TEXT+'\n\n'+SHARE_URL))}
+function shareLinkedIn(){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(SHARE_URL),'_blank')}
+function shareTelegram(){window.open('https://t.me/share/url?url='+encodeURIComponent(SHARE_URL)+'&text='+encodeURIComponent(SHARE_TEXT),'_blank')}
+
+// === QR CODE GENERATION ===
+function generateQR(container,url,size){
+  container.innerHTML='';
+  new QRCode(container,{text:url,width:size,height:size,colorDark:'#0A2540',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+}
+function generateShareQR(){generateQR(document.getElementById('qrContainer'),SHARE_URL,160)}
+function downloadQR(){
+  const c=document.getElementById('qrContainer').querySelector('canvas');
+  if(c){const a=document.createElement('a');a.download='metricom-portafolio-qr.png';a.href=c.toDataURL();a.click()}
+}
+
+// Generate contact QR on load
+window.addEventListener('DOMContentLoaded',()=>{
+  try{generateQR(document.getElementById('contactQR'),SHARE_URL,80)}catch(e){}
 });
 </script>
 </body>
